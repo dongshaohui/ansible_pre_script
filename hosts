@@ -1,0 +1,79 @@
+[midas]
+10.253.2.27 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+10.253.7.86 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[ums]
+10.253.2.27 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+10.253.7.86 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[yeepay_withdraw_scheduler]
+10.253.1.140 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[chinapay_withdraw_scheduler]
+10.253.1.140 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[sms_scheduler]
+10.253.1.140 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[subject_pass_scheduler]
+10.139.110.69 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[subject_shelf_scheduler]
+10.139.96.97 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[contract_settle_scheduler]
+10.139.110.69 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[contract_delivery_scheduler]
+10.139.96.97 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[yeepay_withdraw]
+10.253.1.140 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[chinapay_withdraw]
+10.253.1.140 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[yeepay_deposit_notify]
+10.253.16.37 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[chinapay_deposit_scheduler]
+10.253.16.37 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[lb]
+10.139.106.30 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+10.139.107.58 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[conf_migration]
+10.253.2.27 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[wechat]
+10.253.18.46 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[midas_admin]
+10.139.106.76 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[midas_front]
+10.139.105.119 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+10.139.103.165 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[deploy_server]
+10.253.5.11 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[redis_master]
+10.253.16.15 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[redis_slave]
+10.253.6.89 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[redis_sentinel]
+10.253.6.89 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[cms-publisher]
+10.139.110.213 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+10.139.101.193 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[cms-author]
+10.139.110.69 ansible_ssh_user=root ansible_ssh_pass=AAaa1234
+
+[voucher_expire_scheduler]
+10.139.96.97 ansible_ssh_user=root ansible_ssh_pass=AAaa1234

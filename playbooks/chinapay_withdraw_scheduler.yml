@@ -1,0 +1,8 @@
+- hosts: chinapay_withdraw_scheduler
+  sudo: yes
+  roles:
+    - java
+    - flyway.migration
+    - jar.standalone.daemon
+  vars:
+    skip_migration: false

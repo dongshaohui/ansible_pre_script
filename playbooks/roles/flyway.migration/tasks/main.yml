@@ -1,0 +1,13 @@
+---
+
+- name: install libselinux-python
+  yum: name=libselinux-python state=present
+
+- name: copy flyway
+  copy: src=flyway/ dest=/{{ app }}-flyway
+
+- name: copy conf file
+  template: src=flyway.properties.j2 dest=/{{ app }}-flyway/conf/flyway.properties
+
+- name: add executeable for flyway command
+  shell: chmod +x /{{ app }}-flyway/flyway

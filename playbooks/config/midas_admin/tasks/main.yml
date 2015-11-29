@@ -1,0 +1,33 @@
+---
+
+- name: install the latest version unzip
+  yum: name=unzip state=latest
+
+- name: create midas-admin directory
+  file: path=/midas-admin state=directory
+
+- name: create midas-admin log directory
+  file: path=/midas-admin-logs state=directory
+
+- name: copy midas-admin war
+  copy: src=midas-admin.war dest=/midas-admin/midas-admin.war
+
+- file: name=/usr/share/tomcat/webapps/admin state=absent
+
+- name: create midas-admin war directory
+  file: path=/usr/share/tomcat/webapps/admin state=directory
+
+- name: unarchieve midas admin war
+  shell: unzip /midas-admin/midas-admin.war -d /usr/share/tomcat/webapps/admin
+  notify:
+    - restart tomcat
+
+- name: copy midas-admin configuration
+  copy: src={{ item.src }} dest={{ item.dest }} mode=744
+  with_items:
+    - { src: 'config.js', dest: '/usr/share/tomcat/webapps/admin/js/config/config.js' }
+    - { src: 'api.properties', dest: '/usr/share/tomcat/webapps/admin/WEB-INF/classes/api.properties' }
+    - { src: 'mmm.properties', dest: '/usr/share/tomcat/webapps/admin/WEB-INF/classes/mmm.properties' }
+    - { src: 'log4j.properties', dest: '/usr/share/tomcat/webapps/admin/WEB-INF/classes/log4j.properties'}
+  notify:
+    - restart tomcat

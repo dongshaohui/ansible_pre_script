@@ -1,0 +1,61 @@
+p2p = {
+    api: {
+        uri: "/admin/api"
+    },
+    ums: {
+        uri: "/admin/ums"
+    },
+    yeepay: {
+        withdraw: {
+            uri: "/admin/yeepay"
+        }
+    },
+    admin: {
+        context: "/admin",
+        roles: {
+            SUPER_ADMIN: '超级管理员',
+            ENTERPRISE_USER: '创建企业用户',
+            CREATE_SUBJECT: "创建标的",
+            ABORT_SUBJECT: "撤销标的",
+            SHELVE_SUBJECT: '上架标的',
+            UN_SHELVE_SUBJECT: '下架标的',
+            SIGN_CONTRACT: '确认交割',
+            MANUAL_DEPOSIT: '补记企业用户取现(放款)',
+            MANUAL_WITHDRAW: '补记企业用户充值(还款)',
+            FINANCE: '财务管理员',
+            BIZ_PARAM: '系统参数管理员'
+        }
+    }
+};
+p2p.validator = {
+    highlight: function (element) {
+        $(element).closest('form').find('.submit-btn').attr('disabled','disabled');
+        $(element).closest('.form-group').addClass('has-error');
+    },
+    unhighlight: function (element) {
+        $(element).closest('form').find('.submit-btn').removeAttr('disabled');
+        $(element).closest('.form-group').removeClass('has-error');
+    },
+    errorElement: 'span',
+    errorClass: 'help-block',
+    errorPlacement: function (error, element) {
+        if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+        } else {
+            error.insertAfter(element);
+        }
+    }
+};
+$.ajaxSetup({
+    statusCode: {
+        401: function () {
+            window.location.href = p2p.admin.context + "/login";
+        },
+        403: function () {
+            alert("权限异常");
+        }
+    },
+    beforeSend: function (xhr) {
+        xhr.withCredentials = true;
+    }
+});

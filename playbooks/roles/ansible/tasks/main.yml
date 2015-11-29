@@ -1,0 +1,10 @@
+---
+
+- name: install libselinux-python
+  yum: name=libselinux-python state=present
+
+- name: install epel
+  yum: name=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
+
+- name: install ansible
+  yum: name=ansible state=present

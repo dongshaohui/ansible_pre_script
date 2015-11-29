@@ -1,0 +1,8 @@
+- hosts: yeepay_withdraw
+  sudo: yes
+  roles:
+    - java
+    - flyway.migration
+    - jar.standalone.daemon
+  vars:
+    skip_migration: true

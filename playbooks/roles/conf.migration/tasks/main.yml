@@ -1,0 +1,6 @@
+---
+
+- name: copy conf migration scripts
+  copy: src=sql/ dest=/{{ app }}-flyway/sql
+  notify:
+    - flyway migrate

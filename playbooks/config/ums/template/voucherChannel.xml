@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+    <channel id="kuaiqianbao">
+        <regular id="register">20151126register020020</regular>
+        <regular id="bindcard">20151126bing030040</regular>
+    </channel>
+</config>

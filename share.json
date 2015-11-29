@@ -1,0 +1,106 @@
+{
+  "_share": {
+    "midas": {
+      "host": "http://10.156.242.177",
+      "slb": "http://10.156.242.177"
+    },
+    "wechat": {
+      "md5key": "94c78f4d392ef4819eb80d7a21ede093"
+    },
+    "cookie": {
+      "timeout": 1800,
+      "path": "/",
+      "p2psessionid": "p2psessionid",
+      "httponly": true,
+      "secure": true
+    },
+    "redis": {
+      "master": {
+        "name": "master01",
+        "server": "10.253.16.15:6379"
+      },
+      "sentinels": {
+        "server": "10.253.6.89:26379"
+      }
+    },
+    "secrets": {
+      "deposit": {
+        "sync": "BDDE2601D6EA5EDD9F25B8D2D3AA93D4",
+        "notify": "32840256fd29ae97a3c0d67829d7c6fe"
+      },
+	  "wechat": {
+	   "secret": "9dbfc5f92768ef88d6ef545888214cf8"
+	  },
+      "withdraw": {
+        "feed": "f8dc0bebb4d6297df32849e90aafed72",
+        "notify": "4618ca440aeb445250f1c59212b1da61"
+      },
+      "ums": {
+        "sync": "83576cf60cac556b490f489c06ab50a8",
+        "event": "766a2bb5d24bddae466c572bcabca3ee"
+      },
+      "midas": {
+        "event": "d82494471a62f919a87dcf85c302d383"
+      }
+    },
+    "id5": {
+      "username": "jsfundweb",
+      "password": "jsfundweb_gg5d8C$Z"
+    },
+    "dhst": {
+      "username": "dh6651",
+      "password": "O!3FTm6e",
+      "signature": "【嘉石榴】",
+      "url": "https://www.10690300.com/services/sms"
+    },
+    "yeepay": {
+      "authentication": {
+        "customer_id": "10001674472",
+        "private_key": "c2F2N65BJi04SkrJ4072K7k0x371i20zHUYX5HZb5219A6t757cKwu5d3Xo7",
+        "url": "https://www.yeepay.com/app-merchant-proxy/command"
+      },
+      "deposit": {
+        "customer_id": "10012433026",
+        "private_key": "HI81QYn6h3u767u98ohkKb7eM87I19nE2Moipu15E3z6fo58052y0R6344x4",
+        "url": "https://www.yeepay.com/app-merchant-proxy/node"
+      },
+      "withdraw": {
+        "url": "http://qa.yeepay.com/app-merchant-proxy/groupTransferController.action",
+        "customer_id": "10040003895",
+        "private_key": "m609xmpgnvqznmqhytote9wdv4a7rnklpeqkjgesbe0dok3x7nh5vs7enxs6",
+        "cfca": {
+          "password": "anbang"
+        }
+      }
+    },
+    "chinapay": {
+      "authentication": {
+        "systemId": "90106",
+        "private_key": "BmbGcwIQdpIu4UVMFNaqVj4AgsdWJiEZ",
+        "url": "https://bianmin.chinapay.com/UMPWeb/service/param",
+        "bank_code": "03070000#03030000#01050000#01020000#03050000#01030000#04100000#03090000#01000000#01040000#03020000",
+		"reutrnurl": "https://pre.quboqu.com/user/cp_call_back",
+		"fronturl": "https://bianmin.chinapay.com/UMPWeb/NewCardBindService",
+		"syncurl":"http://10.156.242.177/ums/users/{userId}/front-bank-cards-status"
+      },
+      "deposit": {
+        "merId": "808080211301825",
+        "pubkey_path": "security/PgPubk.key",
+        "prikey_path": "security/MerPrK_808080211301825_20150605140032.key",
+        "pubSignature": "999999999999999",
+        "version": "20150304",
+        "url": "https://sfj.chinapay.com/dac/SinCutServletGBK",
+        "query_url": "https://sfj.chinapay.com/dac/SinCutQueryServletGBK"
+      },
+      "withdraw": {
+        "merId": "808080211301822",
+        "pubkey_path": "security/PgPubk.key",
+        "prikey_path": "security/MerPrK_808080211301822_20150605135815.key",
+        "pubSignature": "999999999999999",
+        "version": "20090501",
+        "url": "https://sfj.chinapay.com/dac/SinPayServletGBK",
+        "query_url": "https://sfj.chinapay.com/dac/SinPayQueryServletGBK"
+      }
+    }
+  }
+}

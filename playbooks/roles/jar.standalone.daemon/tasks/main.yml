@@ -1,0 +1,29 @@
+---
+
+- include: daemon.yml
+
+- name: copy app migration scripts
+  copy: src=../../../config/{{ app }}/sql/ dest=/{{ app }}-flyway/sql
+  when: not skip_migration
+  notify:
+    - flyway migrate
+
+- name: copy app properties
+  copy: src=../../../config/{{ app }}/app/ dest=/{{ app }}/
+  notify:
+    - restart {{ app }}
+
+- name: copy app templates
+  template: src={{ item }} dest=/{{ item | regex_replace('^.*/config/(.*)/template/(.*)$', '\\1/\\2') }}
+  with_fileglob:
+    - ../../../config/{{ app }}/template/*
+  notify:
+    - restart {{ app }}
+
+- name: copy app jar
+  copy: src=../../../config/{{ app }}/jar/{{ app }}-standalone.jar dest=/{{ app }}.jar
+  notify:
+    - restart {{ app }}
+
+- name: enable app service
+  service: name={{ app }} enabled=true

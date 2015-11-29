@@ -1,0 +1,61 @@
+---
+
+- name: add group "tomcat"
+  group: name=tomcat
+
+- name: add user "tomcat"
+  user: name=tomcat group=tomcat home=/usr/share/tomcat
+  sudo: True
+
+- name: delete home dir for symlink of tomcat
+  shell: rm -fr /usr/share/tomcat
+  sudo: True
+
+- name: Check Tomcat Downloaded
+  stat: path=/opt/apache-tomcat-7.0.59.tar.gz
+  register: tomcat_exist
+
+- name: Download Tomcat
+  get_url: url=http://www.us.apache.org/dist/tomcat/tomcat-7/v7.0.59/bin/apache-tomcat-7.0.59.tar.gz dest=/opt/apache-tomcat-7.0.59.tar.gz
+  when: not tomcat_exist.stat.exists
+
+- name: Extract archive
+  command: chdir=/usr/share /bin/tar xvf /opt/apache-tomcat-7.0.59.tar.gz -C /opt/ creates=/opt/apache-tomcat-7.0.59
+  when: not tomcat_exist.stat.exists
+
+- name: Symlink install directory
+  file: src=/opt/apache-tomcat-7.0.59 path=/usr/share/tomcat state=link
+
+- name: Change ownership of Tomcat installation
+  file: path=/usr/share/tomcat/ owner=tomcat group=tomcat state=directory recurse=yes
+
+- name: Configure Tomcat server
+  template: src=server.xml dest=/usr/share/tomcat/conf/
+  notify: restart tomcat
+
+- name: Configure Tomcat users
+  template: src=tomcat-users.xml dest=/usr/share/tomcat/conf/
+  notify: restart tomcat
+
+- name: Install Tomcat init script
+  copy: src=tomcat-initscript.sh dest=/etc/init.d/tomcat mode=0755
+
+- name: Start Tomcat
+  service: name=tomcat state=started enabled=yes
+
+- name: delete Tomcat ROOT
+  file: name=/usr/share/tomcat/webapps/ROOT state=absent
+
+- name: delete Tomcat manager
+  file: name=/usr/share/tomcat/webapps/manager state=absent
+
+# used for iptables
+#- name: install libselinux-python
+#  yum: name=libselinux-python state=present
+#
+#- name: deploy iptables rules
+#  template: src=iptables-save dest=/etc/sysconfig/iptables
+#  notify: restart iptables
+#
+#- name: wait for tomcat to start
+#  wait_for: port={{http_port}}

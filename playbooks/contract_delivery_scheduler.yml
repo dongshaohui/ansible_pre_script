@@ -1,0 +1,7 @@
+- hosts: contract_delivery_scheduler
+  sudo: yes
+  roles:
+    - java
+    - jar.standalone.daemon
+  vars:
+    skip_migration: true

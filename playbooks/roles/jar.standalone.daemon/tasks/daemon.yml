@@ -1,0 +1,16 @@
+---
+
+- name: create app directory
+  file: path=/{{ app }} state=directory
+
+- name: create app log directory
+  file: path=/{{ app }}-logs state=directory
+
+- name: copy app service
+  template: src={{ item.src }}.j2 dest={{ item.dest }} mode=744
+  with_items:
+    - { src: 'service_args', dest: '/etc/sysconfig/{{ app }}' }
+    - { src: 'service_exec', dest: '/usr/sbin/{{ app }}' }
+    - { src: 'service', dest: '/etc/init.d/{{ app }}'}
+  notify:
+    - restart {{ app }}

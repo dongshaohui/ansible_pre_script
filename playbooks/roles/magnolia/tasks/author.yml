@@ -1,0 +1,21 @@
+---
+- name: examine the author.tar.gz
+  stat: path=/tmp/author.tar.gz
+  register: author_status
+
+- name: upload magnolia author archives
+  copy: src=author.tar.gz dest=/tmp
+  when: not author_status.stat.exists
+
+- name: extract the author
+  unarchive: src=/tmp/author.tar.gz dest=/opt/apache-tomcat-7.0.59/webapps copy=no
+             owner={{ tomcat_owner }} group={{ tomcat_group }} mode=0644
+
+- name: change the owner of the magnolia author
+  shell: chown -R {{ tomcat_owner}}:{{ tomcat_group}} /opt/apache-tomcat-7.0.59/webapps/author
+
+- name: flush handler to make handle effect
+  meta: flush_handlers
+
+- name: ensure the tomcat is running
+  service: name=tomcat state=started

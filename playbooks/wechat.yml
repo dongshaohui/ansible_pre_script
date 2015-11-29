@@ -1,0 +1,6 @@
+- hosts: wechat
+  sudo: yes
+  roles:
+    - java
+    - tomcat
+    - war.tomcat

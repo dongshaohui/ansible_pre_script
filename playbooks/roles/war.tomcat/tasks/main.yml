@@ -1,0 +1,37 @@
+---
+
+- name: install the latest version unzip
+  yum: name=unzip state=latest
+
+- name: create app directory
+  file: path=/{{ app }} state=directory
+
+- name: create app log directory
+  file: path=/{{ app }}-logs state=directory
+
+- name: copy app war
+  copy: src=../../../config/{{ app }}/war/{{ app }}.war dest=/{{ app }}/{{ app }}.war
+
+- name: create tomcat app directory
+  file: name=/usr/share/tomcat/webapps/{{ context_path }} state=absent
+
+- name: create app war directory
+  file: path=/usr/share/tomcat/webapps/{{ context_path }} state=directory
+
+- name: unarchieve app war
+  shell: unzip -o /{{ app }}/{{ app }}.war -d /usr/share/tomcat/webapps/{{ context_path }}
+  notify:
+    - restart tomcat
+
+- name: copy app files
+  copy: src=../../../config/{{ app }}/app/ dest=/usr/share/tomcat/webapps/{{ context_path }}/WEB-INF/classes/ mode=744
+  notify:
+    - restart tomcat
+
+- name: copy app templates
+  template: src=../../../config/{{ item.source }} dest=/usr/share/tomcat/webapps/{{ item.target }} mode=744
+  with_items:
+    - "{{ templates }}"
+  notify:
+    - restart tomcat
+

@@ -1,0 +1,5 @@
+.idea/
+*.iml
+*.ipr
+playbooks/config/**/jar/*.jar
+playbooks/config/**/war/*.war

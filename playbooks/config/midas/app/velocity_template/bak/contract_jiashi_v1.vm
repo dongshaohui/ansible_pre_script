@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<script type="text/javascript">
+    document.oncontextmenu = function (e) {
+        return false;
+    }
+</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>特定资产支持借款协议</title>
+    <style type="text/css">
+        body {
+            font-family: SimSun;
+            -moz-user-select: none;
+        }
+
+        wrap {
+            white-space: normal;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        table {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td {
+            border: 1px solid #000000;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            position: absolute;
+            left: 0;
+        }
+
+        .paddingLeft {
+            padding-left: 72px;
+        }
+
+        .paddingLeft2 {
+            padding-left: 34px;
+        }
+
+        .paddingLeft3 {
+            padding-left: 86px;
+        }
+
+        .underline {
+            display: inline-block;
+            border-bottom: 1px solid #000000;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto;
+            width: 680px;
+        }
+
+        .alignCenter {
+            text-align: center;
+        }
+
+        .alignRight {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-family: SimHei;
+        }
+
+        @page {
+            margin-bottom: 70px;
+            counter-increment: page;
+
+            @bottom-center {
+                content: counter(page) " / " counter(pages);
+            }
+        }
+
+    </style>
+</head>
+<body onselectstart="return false">
+<h1 class="alignCenter font-bold">特定资产支持借款协议</h1>
+
+<h2 class="alignCenter font-bold">$!{unitTool.formatSubjectTitle(${contract.subject.catalog})}-$!{contract.subject.title}</h2>
+
+<div class="alignCenter width=100%">协议编号：
+    <p class="underline" style="width: 32%;">&nbsp;$!{contract.contractId}</p>
+</div>
+<p>出借方(甲方)：</p>
+<table style="table-layout: fixed;width:100% " class="alignCenter">
+    <thead>
+    <tr>
+        <th width="15%">
+            姓名
+        </th>
+        <th width="25%">
+            身份证号
+        </th>
+        <th width="20%">
+            会员编号
+        </th>
+        <th width="22%">
+            用户名
+        </th>
+        <th width="18%">
+            联系电话
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        #foreach($additionalContract in ${contract.additionalContracts})
+        <tr>
+            <td class="alignCenter">$!{additionalContract.user.certification.certifiedName}</td>
+            <td class="alignCenter">${additionalContract.user.certification.certifiedIdentity}</td>
+            <td class="alignCenter">$!{additionalContract.user.userid}</td>
+            <td class="alignCenter">$!{additionalContract.user.username}</td>
+            <td class="alignCenter">$!{additionalContract.user.phone}</td>
+        </tr>
+        #end
+    </tbody>
+</table>
+
+<p style="margin-top: 5%;">借款方(乙方)：</p>
+
+<div>组织机构代码证:
+    <p class="underline" style=" width: 32%;">&nbsp;$!{contract.owner.organizationCode}</p>；
+</div>
+<div>会员编号:
+    <p class="underline" style="width: 39%;">&nbsp;$!{contract.owner.userId}</p>；
+</div>
+<div>用户名:
+    <p class="underline" style="width: 41%;">&nbsp;$!{contract.owner.username}</p>；
+</div>
+<div>联系方式:
+    <p class="underline" style="width: 39%;">&nbsp;$!{contract.owner.organizationContactPhone}</p>。
+</div>
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+
+
+<p class="alignCenter font-bold title">第一章 特定资产支持借款协议</p>
+
+<div class="row">
+    <div class="font-bold column">第一条</div>
+    <div class="paddingLeft">
+        经由嘉实金融信息服务(杭州)有限公司(简称“嘉实金服”)居间撮合，甲乙双方协商，一致同意由甲方向乙方出借资金，从而确定借款关系，现就相关事宜达成本《特定资产支持借款协议》(简称“本协议”)，以期共同遵守。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二条</div>
+    <div class="paddingLeft">
+        甲方为符合中华人民共和国法律(简称“中国法律”)规定的具有完全民事权利能力和民事行为能力,独立行使和承担本协议项下权利义务的自然人, 愿意以自有资金出借给乙方从而享受收益并承担相应风险。甲方为在“嘉石榴”注册的特定用户。    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三条</div>
+    <div class="paddingLeft">
+        乙方为在中华人民共和国境内注册的企业,愿意按照“嘉实金服”的相关业务规则提出融资需求,并在满足本协议约定条件下向“嘉石榴”注册的特定用户借入资金并承担债务。
+    </div>
+</div>
+
+<div class="row">
+    <div class="font-bold column">第四条</div>
+    <div class="paddingLeft">
+        本协议项下甲方、乙方单独称“一方”，合称“双方”。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第二章 特定资产支持借款要素</p>
+
+<table style="table-layout: fixed;width: 100%;">
+    <tr>
+        <td colspan="6">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                出借方(甲方)出借资金信息</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="font-bold alignCenter wrap" style="width: 10%;">姓名</td>
+        <td class="font-bold alignCenter wrap" style="width: 25%;">用户名</td>
+        <td class="font-bold alignCenter wrap" style="width: 5%;">身份证号</td>
+        <td class="font-bold alignCenter wrap" style="width: 15%;">出借金额(元)*</td>
+        <td class="font-bold alignCenter wrap" style="width: 10%;">出借比例(%)*</td>
+        <td class="font-bold alignCenter wrap" style="width: 15%;">预期应得利息(元)*</td>
+    </tr>
+    #foreach($additionalContract in ${contract.additionalContracts})
+        <tr>
+            <td class="alignCenter wrap">$!{additionalContract.user.certification.certifiedName}</td>
+            <td class="alignCenter wrap">$!{additionalContract.user.username}</td>
+            <td class="alignCenter wrap">$!{unitTool.formatString(${additionalContract.user.certification.certifiedIdentity})}</td>
+            <td class="alignCenter wrap">$!{moneyTool.formatMoney(${additionalContract.investAmount})}</td>
+            <td class="alignCenter wrap">$!{numberTool.percentageFormat(${additionalContract.investRatio})}</td>
+            <td class="alignCenter wrap">$!{moneyTool.formatMoney(${additionalContract.prospectiveEarnings})}</td>
+        </tr>
+    #end
+    <tr>
+        <td class="alignRight" colspan="3">
+            <p class="font-bold" style="display: inline;">合计</p>
+        </td>
+        <td class="alignCenter">
+            #set($total = 0)
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($total = $total + $additionalContract.investAmount.amount)
+            #end
+            #if($total > 0)
+                ${total}
+            #end
+        </td>
+        <td class="alignCenter">
+            #set($totalPercent = 0)
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($totalPercent = $totalPercent + $additionalContract.investRatio)
+            #end
+            $!{numberTool.percentageFormat(${totalPercent})}
+        </td>
+        <td class="alignCenter">
+            #set($total = 0)
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($total = $total + $additionalContract.prospectiveEarnings.amount)
+            #end
+            #if($total > 0)
+                ${total}
+            #end
+        </td>
+    </tr>
+</table>
+
+<table style="table-layout: fixed;width: 100%;">
+    <tr>
+        <td colspan="4">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                借款方(乙方)
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">公司名称</td>
+        <td class="alignCenter">$!{contract.owner.organizationName}</td>
+        <td class="alignCenter">“嘉石榴”用户名</td>
+        <td class="alignCenter">$!{contract.owner.username}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">组织机构代码证号</td>
+        <td class="alignCenter" colspan="3">$!{contract.owner.organizationCode}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                借款信息
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">借款总额*</td>
+        <td class="alignCenter">$!{contract.subject.currentInvestmentAmount.amount}</td>
+        <td class="alignCenter">借款期限</td>
+        <td class="alignCenter">
+            $!{contract.subject.instalmentPolicy.interval.count}
+            $!{unitTool.toChineseUnit($!{contract.subject.instalmentPolicy.interval.unit})}
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">起息日</td>
+        <td class="alignCenter">$!{date.format('yyyy年MM月dd日', $contract.valueDate)}</td>
+        <td class="alignCenter">借款利率</td>
+        <td class="alignCenter">$!{number.format("percent", $contract.subject.rate)}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter" rowspan="3">还本付息方式</td>
+        <td>▅到期一次性还本付息</td>
+        <td class="alignCenter">还款付息日</td>
+        <td class="alignCenter">为到期日</td>
+    </tr>
+    <tr>
+        <td>□按(季/月)付息，到期还本</td>
+        <td class="alignCenter">还款付息日</td>
+        <td class="alignCenter">每(季末月/月)_____日</td>
+    </tr>
+    <tr>
+        <td>□按月等额本息</td>
+        <td class="alignCenter">还款付息日</td>
+        <td class="alignCenter">每月_____日</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">到期日</td>
+        <td class="alignCenter" colspan="3">$!{date.format('yyyy年MM月dd日', $!{contract.maturityDate})}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">到期应还本息*</td>
+        <td class="alignCenter" colspan="3">合计应还本息：$!{moneyTool.sumMoney(${contract.prospectiveInterest}, ${contract.prospectivePrincipal})}元，其中本金：$!{moneyTool.formatMoney(${contract.prospectivePrincipal})}元，利息：$!{moneyTool.formatMoney(${contract.prospectiveInterest})}元。</td>
+    </tr>
+</table>
+<br/>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        注:
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        1.标注*的信息以“嘉石榴”系统生成的最终数据为准。出借方在本协议项下借款需求的发布期内多次出借资金的，出借方出借金额为历次出借金额之和。
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        2.一般情况下,“嘉石榴”将借款方偿付的到期应还本息按出借方预期应得本息向出借方进行分配。借款方到期应还本息与出借方预期应得本息合计之间,因进位算法可能产生的差额部分,多出部分归“嘉石榴”所有,缺少部分由“嘉石榴”负责补足,基于上述原因造成的出借方预期应得利息与实际收款金额不一致的,以实际收款金额为准。其中,出借方预期应得本息为出借方出借金额与预期应得利息之和。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第三章 定义与解释</p>
+
+<div class="row">
+    <div class="font-bold column">第五条</div>
+    <div class="paddingLeft">
+        定义
+    </div>
+</div>
+<div class="row">
+    <div class="colum">
+        除非甲乙双方另有约定，本协议下列术语定义如下：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        “嘉石榴”:是指由嘉实金服开发、管理并运营的,向注册会员用户提供投融资信息发布与管理、投融资交易管理、交易资金结算(由支付机构提供)等服务的金融信息中介服务平台。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        借款方:是指直接或间接向嘉实金服提出融资需求,进而通过“嘉石榴”定向向“嘉石榴”的注册用户发布该融资需求,并在满足特定条件时获得融资资金的自然人或法人。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        出借方:是指经嘉实金服居间撮合,向通过“嘉石榴”提出融资需求的借款方出借资金的自然人。出借方为在“嘉石榴”注册的特定用户。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        支付机构:是指为“嘉石榴”的用户提供资金结算等服务的机构,由嘉实金服具体指定。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        支付结算账户:是指经出借方和借款方申请,在支付机构或嘉实金服开立的,用于查询、划转或收取本协议项下相应款项的账户。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        借款总额:是指借款方根据其融资需求拟通过“嘉石榴”向一个或多个出借方获得的总借款金额,该金额以“嘉石榴”具体发布展示及相应记录为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        特定资产:是指借款方在发布本协议之融资需求时所指明的借款方已持有或确认可于起息日或之前持有并预期可获得现金收益用以支付本协议项下应付本息的金融资产或金融权益。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        出借比例:是指本协议之出借方对借款方出借的资金占借款方借款总额的比例, 出借比例不低于0.5%。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        发布期:是指借款方在“嘉石榴”发布融资需求的期限,该期限以“嘉石榴”具体发布展示及相应记录为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        起息日:是指借款方根据本协议约定获得借款资金的日期,该日期以本协议约定为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">11.</div>
+    <div class="paddingLeft2">
+        还款付息日:是指借款方根据本协议的约定针对所借款项支付本金或利息的日期,该日期以本协议约定为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">12.</div>
+    <div class="paddingLeft2">
+        到期日:是指最后一个还款付息日,该日期以本协议约定为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">13.</div>
+    <div class="paddingLeft2">
+        收款日:是指出借方预计收到应得本金或利息的日期,该日期通常不晚于借款方支付本金或利息后的三个工作日,嘉实金服及支付机构会尽力提早向借款方支付本协议项下应得款项,但不对该时效提供任何承诺。
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">14.</div>
+    <div class="paddingLeft2">
+        宽限期:是指还款付息日后的若干个自然日。在该期间借款方足额还款的,不计罚息,其中宽限期的最后一个自然日为宽限期届满之日。
+    </div>
+</div>
+<div class="row">
+    <div class="column">15.</div>
+    <div class="paddingLeft2">
+        预期应得利息:是指出借方根据本协议的约定预期能获得的利息收益,具体金额以实际收款为准,嘉实金服不对其提供任何担保或承诺。
+    </div>
+</div>
+<div class="row">
+    <div class="column">16.</div>
+    <div class="paddingLeft2">
+        工作日:是指嘉实金服的正常营业日(不包括中国的法定公休日和节假日)。
+    </div>
+</div>
+<div class="row">
+    <div class="column">17.</div>
+    <div class="paddingLeft2">
+        自然日:是指日历日,包括工作日和非工作日。
+    </div>
+</div>
+<div class="row">
+    <div class="column">18.</div>
+    <div class="paddingLeft2">
+        服务费:是指借款方因使用“嘉石榴”所提供的金融信息服务而向嘉实金服支付的相关费用。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第六条</div>
+    <div class="paddingLeft">
+        本协议所涉及的金额均精确到分位,分位以下的金额采用银行家算法(四舍六入五看前,奇进偶舍);本协议所涉及到的百分比均采用四舍五入的方式保留小数点后两位。
+    </div>
+</div>
+
+<div class="row">
+    <div class="font-bold column">第七条</div>
+    <div class="paddingLeft">
+        本协议未做定义或约定的词语,以“嘉石榴”所发布或展示时列示的为准,如未予列示,按照相关法律、法规或行业惯例解释。
+    </div>
+</div>
+
+
+<p class="alignCenter font-bold title">第四章 借款</p>
+
+<div class="row">
+    <div class="font-bold column">第八条</div>
+    <div class="paddingLeft">
+        借款方可以向一个或多个出借方进行借款。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第九条</div>
+    <div class="paddingLeft">
+        借款流程如下：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        借款方和出借方同意并确认,各方通过自行或授权有关方根据“嘉石榴”有关规则和说明,在“嘉石榴”以发布借款需求或进行投资操作等方式签署本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        出借方理解并同意,在以点击确认投资按钮签署本协议的同时,嘉实金服即有权将出借方在“嘉石榴”账户中的资金进行冻结,冻结金额等同于出借方确认出借的资金金额,该冻结将在本协议确定失效时解除。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        本协议在标的所约定的起息日生效。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        出借方和借款方理解并同意,在本协议生效的同时,嘉实金服即有权将冻结资金划转至借款方的“嘉石榴”账户或指定银行账户中,划转完毕即视为借款发放成功,借款方是否提取及使用资金不影响本协议效力。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十条</div>
+    <div class="paddingLeft">
+        借款方用于支持还款的特定资产应符合以下条件：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        属借款方合法持有并预期可产生可现金收益的金融资产或金融权益，未被质押、转让给任何第三方，没有任何权利瑕疵；
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        尚未到期。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十一条</div>
+    <div class="paddingLeft">
+        出借方应于起息日前向借款方支付本协议约定的出借资金。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十二条</div>
+    <div class="paddingLeft">
+        借款方与各出借方之间的债权债务关系相互独立，各出借方之间不相互承担连带责任。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十三条</div>
+    <div class="paddingLeft">
+        在出借方根据本协议的约定足额支付出借资金的前提下,嘉实金服及支付机构根据出借方的授权将出借资金自出借方支付结算户划转至借款方支付结算账户,本协议项下出借方与借款方之间的借款关系于起息日成立。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十四条</div>
+    <div class="paddingLeft">
+        出借方理解并同意出借资金从其银行账户或支付结算账户划出之日起至起息日(不含)之间可能存在一定期限,在这一期限内出借资金不产生任何收益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十五条</div>
+    <div class="paddingLeft">
+        如在发布期内未征集到预期的借款总额,且借款方同意按实际征集款项进行借款的,出借方同意借款总额为实际征集到的借款金额。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十六条</div>
+    <div class="paddingLeft">
+        如因以下原因导致出借方与借款方之间的资金借款关系不能如期成立的,经“嘉石榴”公告,本协议终止,出借方与借款方互不承担法律责任,嘉实金服将于公告发布之日起三个工作日内将出借方已被冻结之资金予以解冻:
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        在发布期内未征集到预期的借款总额,且借款方不同意按实际征集款项进行借款的;
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        在发布期内借款方确认无法按预期落实用于支持该借款的特定资产,或用于支持该借款的特定资产发生不能按期兑付的情形或其他权利瑕疵;
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        在发布期内借款方单方面取消借款申请;
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        其他嘉实金服认为有必要终止借款的情况。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十七条</div>
+    <div class="paddingLeft">
+        在债权存续期内,经嘉实金服同意,出借方可以且仅可以通过“嘉石榴”将本协议项下债权进行转让,并通过“嘉石榴”通知借款方。债权转让的具体方式以“嘉石榴”发布的相关业务规则为准。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第五章 还款</p>
+
+<div class="row">
+    <div class="font-bold column">第十八条</div>
+    <div class="paddingLeft">
+        借款方应于还款付息日12:00 前将当期应偿付资金划转至本协议约定的银行账户并不可撤销地授权嘉实金服及支付机构将当期应偿付资金划转至出借方在“嘉石榴”账户,以完成还款。
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft">
+        偿付资金划入以下账户：<br />
+        户名：嘉实金融信息服务(杭州)有限公司
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft">
+        开户行：工商银行朝内大街支行
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft">
+        账号：0200211119000012191
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十九条</div>
+    <div class="paddingLeft">
+        应偿付资金按如下方式计算：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        采用到期一次性还本付息的,应偿付资金=借款总额+借款总额*借款利率*借款期限(天)/360;
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        采用按(季/月)付息到期还本的， 各期应偿付资金(除最后一期)=借款总额*借款利率*当期付息天数(天)/360，
+        最后一期应偿付资金=借款总额+借款总额*借款利率*当期付息天数(天)/360，当期付息天数=当期还款付息日 - 上一期还款付息日(首期偿付为起息日)。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        采用按月等额本息付款的，各期应偿付资金见《还款计划表》。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十条</div>
+    <div class="paddingLeft">
+        在借款方正常还款的情况下,出借方享有借款方归还的借款本金及相应利息收益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十一条</div>
+    <div class="paddingLeft3">
+        出借方理解并同意,由于银行或第三方支付机构操作时间的原因,借款方支付资金与出借方支付结算账户收到资金的日期可能不一致,最终将本协议项下的借款本息划转至出借方支付结算账户通常需要1-3 个工作日,在该期间内不产生任何投资收益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十二条</div>
+    <div class="paddingLeft3">
+        出借方同意,在债权存续期内借款方可提前还款。在该情况下,借款方应至少提前 3 个工作日通知嘉实金服并通过“嘉石榴”通知出借方,并依据借款利率和实际借款期限计算并支付出借方应得本息。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十三条</div>
+    <div class="paddingLeft3">
+        借款方在借款期限内正常还款的,出借方不得要求借款方提前还款或宣布借款提前到期。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十四条</div>
+    <div class="paddingLeft3">
+        在还款付息日的12:00前,因借款方未能足额支付应偿付资金或其他借款方原因导致支付机构无法足额扣划应偿付资金,视为借款方逾期。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十五条</div>
+    <div class="paddingLeft3">
+        尽管前款约定,出借方与借款方仍一致同意,借款方逾期但在【$!{contract.subject.config.graceDays}】个自然日的宽限期届满之日的 12:00 前足额支付应偿付资金的,不计罚息;借款方逾期且未在宽限期届满之日的 12:00 前足额支付应偿付资金的,除应按照本协议约定支付应偿付资金外,还应自逾期之日起每日以全部本金为基数按照本协议约定支付罚息,直至完全清偿,罚息利率为每日万分之【$!{percentTool.toChinesePenaltyPercent(${contract.subject.config.overduePenaltyRate})}】。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十六条</div>
+    <div class="paddingLeft3">
+        借款方归还的款项不足以清偿其在本协议项下应付数额的,偿付顺序为应支付的服务费、逾期罚息、利息、本金。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十七条</div>
+    <div class="paddingLeft3">
+        出借方同意借款方支付的本息及罚息以用于支持本借款的特定资产所产生的全部现金收益扣减为实现该等收益所产生的必备费用后的剩余部分为限。必备费用包括但不限于支付机构收取的支付结算服务费、保护和实现特定资产现金收益而支出的诉讼费、仲裁费、律师费、会计费等。特定资产所产生的全部现金收益不足以支付全部应付本息及罚息的,出借方根据本协议约定之借款比例享有。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十八条</div>
+    <div class="paddingLeft3">
+        借款方逾期时,出借方可以且仅能就借款方提供的特定资产实现自己的债权。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第六章 权利与义务</p>
+
+<div class="row">
+    <div class="font-bold column">第二十九条</div>
+    <div class="paddingLeft3">
+        出借方的权利义务包括：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        出借方承诺向“嘉石榴”提供的信息合法、真实、及时、有效,用于出借的资金来源 合法且具有自主支配权利;
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        出借方同意以网络页面点击确认的方式签订本协议,并不以此为由拒绝履行本协议项下的义务,即便在签订时本协议并没有借款方借款总额等信息。出借方同意以前述方式签订本协议后即视为不可撤销及不可变更地授权嘉实金服根据最终撮合结果自主生成前述信息,且未经借款方及嘉实金服的同意,出借方不得否认本协议项下债权债务关系或以任何方式撤回、撤销本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        出借方有权依本协议约定从借款方处获得基于出借资金的本金和利息。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        出借方同意并授权嘉实金服根据本协议向支付机构出具必要的交易指令,并授权嘉实金服及/或支付机构根据该指令从其银行账户或支付结算账户中划转相应的出借资金至借款方的指定银行账户或支付结算户从而完成放款。出借方有义务确保其签署本协议之前在本协议约定的银行账户或支付结算户中留有足够的资金以完成资金扣划及放款。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        出借方同意,在借款方授权嘉实金服根据本协议将借款本金及/或利息划转至出借方支付结算账户后即视为借款方已履行还款义务。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        出借方必须通过本协议约定的方式或嘉实金服及支付机构所认可的方式进行放款,否则由此引起的法律后果及违约责任由出借方自行承担。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        出借方应保证其支付结算账户及银行账户状态正常,以确保资金划出、划入交易顺利完成。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        借款方债务逾期时,如有第三方机构代借款方偿还债务,则出借方同意在第三方机构代偿之日起本协议项下债权及相关权益无偿转移给代偿机构,如需额外签署债权转让法律文件,出借方同意配合。出借方、借款方理解并同意,虽有该款约定,但并不意味着对任一笔借款一定有第三方机构进行代偿,亦不意味嘉实金服具有进行代偿或安排第三方机构进行代偿的义务。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        出借方在资金出借、转让过程中产生的相关税费,由出借方自行向主管税务机关申报、缴纳。如果法律法规规定“嘉石榴”具有代扣代缴义务,则“嘉石榴”有权直接代扣代缴并向出借方提供纳税凭证。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        出借方已阅读了本协议的风险提示,并完全理解其可能面临的风险,理解并同意嘉实金服不承担本协议项下出借方任何资金损失的风险。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十条</div>
+    <div class="paddingLeft3">
+        借款方的权利义务包括：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        借款方承诺向“嘉石榴”提供的信息合法、真实、及时、有效,借款资金用途合法合规。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        借款方同意以网络页面点击确认等方式签订本协议,并不以此为由拒绝履行本协议项下的义务,即便在签订时本协议并没有出借方的信息、签订日期信息等。借款方同意以前述方式签订本协议后即视为不可撤销及变更地授权嘉实金服根据最终撮合结果自主生成前述信息,且未经出借方及嘉实金服的同意,借款方不得否认本协议项下债权债务关系或以任何方式撤回、撤销本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        借款方有义务依本协议约定向出借方支付基于出借资金的借款本金和利息。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        借款方同意并授权嘉实金服根据本协议向支付机构出具交易指令,以及支付机构根据该指令将借款资金划付至借款方的指定账户即视为出借方履行完成放款义务。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        借款方必须通过本协议约定或嘉实金服及支付机构所认可的方式进行还款,否则由此引起的法律后果及违约责任由借款方自行承担。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        借款方应保证其支付结算账户及银行账户状态正常,以确保资金划出、划入交易顺利完成。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        借款方同意、授权并配合嘉实金服采取份额冻结、收益分配账户监管等控制措施,控制本协议所约定的特定资产的收益;借款方同意无论借款是否逾期,在向出借方足额偿付应付本息前,本协议所约定的特定资产所产生的任何收益均不予以提取,除非用于支付本协议项下本息。尽管有上述约定,嘉实金服不承诺上述控制措施有效,也不因采取上述控制措施而承担任何法律责任。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        借款方同意并承诺所有出借方对于其在本协议所约定之特定资产按出借比例享有受偿权。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        如有第三方机构对其在本协议项下之债务进行了代偿,则借款方无条件同意本协议项下之债权由出借方转移至代偿方。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        借款方有义务向嘉实金服支付服务费。
+    </div>
+</div>
+<div class="row">
+    <div class="column">11.</div>
+    <div class="paddingLeft2">
+        当借款方持有的特定资产出现影响特定资产兑付的重大不利情形时,借款方应及时通知嘉实金服并授权嘉实金服通过“嘉石榴”向出借方等相关方进行披露。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第七章 信息披露</p>
+
+<div class="row">
+    <div class="font-bold column">第三十一条</div>
+    <div class="paddingLeft3">
+        借款方及出借方同意嘉实金服根据本协议各方当事人的授权进行相关信息披露,嘉实金服进行信息披露将采用以下一种或几种形式:
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        1. 网站公告
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        2. 系统通知
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        3. 传真、电子邮件等其他方式
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        如出借方或借款方留有传真号、电子邮箱、固定电话、移动电话等联系方式的,嘉实金服也可通过传真、电子邮件、电话、短信等方式将信息告知出借方或借款方。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十二条</div>
+    <div class="paddingLeft3">
+        信息披露的内容
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        事件通知
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (1)借款确认通知
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        借款方与出借方经“嘉石榴”订立的借款协议生效后,“嘉石榴”向出借方和借款方发送借款确认通知,通知内容包括各出借方借出款项的金额、起息日、到期日等。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (2)借款取消通知
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        因本协议第十六条所述原因导致借款不成功时,“嘉石榴”向出借方和借款方发送借款取消通知,通知内容包括借款不成功的原因、冻结资金解冻等。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (3) 资金支付通知
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        当还款资金到达出借方支付结算账户后,“嘉石榴”向出借方发送资金支付通知,通知内容包括应分配给出借方的本息总额等。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        临时通知
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        当借款方发生影响其履行本协议项下还本付息义务的事件时,“嘉石榴”向出借方发送临时通知。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第八章 法律责任</p>
+
+<div class="row">
+    <div class="font-bold column">第三十三条</div>
+    <div class="paddingLeft3">
+        借款方以非法占有为目的,虚构事实或者隐瞒真相,向出借方和“嘉石榴”提供虚假文件资料或者对出借方和“嘉石榴”进行虚假不实、严重误导或重大遗漏的陈述或者诱导,侵犯公私财产所有权,构成犯罪的,应当依法承担刑事责任。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十四条</div>
+    <div class="paddingLeft3">
+        借款方、出借方均承诺,不得利用“嘉石榴”进行信用卡套现、洗钱或其他违法违规行为,否则应依法自行承担由此产生的法律责任与后果。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第九章 其他事项</p>
+
+<div class="row">
+    <div class="font-bold column">第三十五条</div>
+    <div class="paddingLeft3">
+        本协议项下的借款申请材料与本协议相关的通知、证明、凭证、函电等附件均是本协议不可分割的组成部分,具有同等法律效力,对本协议双方均有法律约束力。本协议任何条款的标题仅为方便援引和阅读而设置,不得被用于解释本协议任何条款的依据。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十六条</div>
+    <div class="paddingLeft3">
+        借款方和出借方均同意并确认,借款方、出借方通过“嘉石榴”和银行账户采取的行为所产生的法律效果和法律责任归属于借款方、出借方本人;借款方、出借方授权和委托嘉实金服和“嘉石榴”根据本协议所采取的全部行动和措施的法律后果均归属于借款方、出借方本人,与嘉实金服和“嘉石榴”无关,嘉实金服和“嘉石榴”也不因此承担任何责任。在任何情形下,嘉实金服和“嘉石榴”不是本协议项下任何借款或债务的债务人。嘉实金服和“嘉石榴”不需要以其自有资金偿还本协议项下的任何借款或债务。嘉实金服和“嘉石榴”不是本协议项下债务的担保人。嘉实金服和“嘉石榴”不需要以其自有资金承担担保责任。借款方和出借方同意,嘉实金服和“嘉石榴”有权就其为借款方和出借方提供的服务收取服务费。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十七条</div>
+    <div class="paddingLeft3">
+        本协议各方委托“嘉石榴”保管所有与本协议有关的书面文件或电子信息,出借方和借款方双方已认真阅读并完全理解本协议所有内容并自愿按本协议相关约定履行各自的权利义务。本协议项下借款记录等信息均以“嘉石榴”生成并公布的内容为准,出借方和借款方可以通过登录“嘉石榴”账户进行查询。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十八条</div>
+    <div class="paddingLeft3">
+        本协议经借款方、出借方通过“嘉石榴”以网络在线点击确认的方式签署,本协议的任何修改、补充均须以“嘉石榴”电子文本形式做出。出借方、借款方应妥善保管自己在“嘉石榴”的注册用户名和密码,自行承担因注册用户名和密码丢失、泄漏或允许他人使用产生的法律后果和经济后果。通过任何一方的用户名和密码登录网站后的任何操作均视为该方本人的真实意思表示,“嘉石榴”将予以确认。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十九条</div>
+    <div class="paddingLeft3">
+        本协议自借款方和出借方签署之日起成立,双方签署日非同一日的,以后签署协议的一方签署日期为准。自本协议约定的起息日生效,至本协议项下借款本金、利息、罚息及所有其他应付款项清偿之日终止。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十条</div>
+    <div class="paddingLeft3">
+        协议各方应对本协议的信息及内容予以保密,未经其他签约方一致同意,任何一方不得向协议主体之外的任何其他方披露,但法律、法规另有强制性规定,或因监管、审计等有权机关或机构另有强制性要求的除外。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十一条</div>
+    <div class="paddingLeft3">
+        协议各方知悉并承诺遵守“嘉石榴”载明的其他相关服务协议,包括但不限于《“嘉石榴”网站服务协议(个人会员)》。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十二条</div>
+    <div class="paddingLeft3">
+        双方依照法律规定各自承担本协议订立和履行过程中发生的税费。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十三条</div>
+    <div class="paddingLeft3">
+        如任意一方发生不可抗力事件,该方应及时通知另一方,并在15日内提供证明文件说明有关事件的细节和不能履行或部分不能履行或需延迟履行本协议的原因。双方应在协商一致的基础上决定是否延期履行本协议、终止本协议,并达成书面协议。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十四条</div>
+    <div class="paddingLeft3">
+        本协议中部分条款根据相关法律法规等的规定成为无效,或部分无效时,该等无效不影响本协议项下其他条款的效力,双方仍应继续履行其在本协议项下的义务。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十五条</div>
+    <div class="paddingLeft3">
+        本协议项下的附件和补充协议构成本协议不可分割的一部分。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十六条</div>
+    <div class="paddingLeft3">
+        本协议受中华人民共和国法律管辖并按中华人民共和国法律解释。协议履行中发生争议,可由各方协商解决,协商不成的,应将争议提交至中国国际经济贸易仲裁委员会根据该会届时有效的仲裁规则通过仲裁解决,仲裁地点为北京。仲裁裁决是终局性的并对各方当事人具有约束力,仲裁费由败诉方承担。
+    </div>
+</div>
+</body>
+</html>

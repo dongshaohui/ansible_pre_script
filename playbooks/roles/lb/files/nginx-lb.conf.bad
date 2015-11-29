@@ -1,0 +1,73 @@
+server {
+    listen       80;
+    server_name  localhost;
+    error_page 503 /503.html;
+
+    location /{
+    	root   html;
+	index  index.php index.html index.htm;
+    }
+    location /yeepay/deposits-notify {
+        proxy_pass   http://yeepay.deposit.notify/yeepay/deposits-notify;
+    }
+   location /ums {
+      return 301 https://pre.quboqu.com;
+    }
+
+    location /static {
+         return 301 https://pre.quboqu.com;
+    }
+
+    location /author {
+         return 301 https://pre.quboqu.com;
+    }
+
+    location /admin/ums/ {
+           return 301 https://pre.quboqu.com;
+    }
+
+    location /admin/ {
+          return 301 https://pre.quboqu.com;
+    }
+
+    #location /admin/yeepay/withdraw {
+    #    proxy_pass   http://withdrawserver/yeepay/withdraw;
+    #}
+    location /admin/payment/withdraw {
+           return 301 https://pre.quboqu.com;
+    }
+
+    location /admin/api/ {
+   return 301 https://pre.quboqu.com;
+    }
+
+    location /api/ {
+   return 301 https://pre.quboqu.com;
+    }
+
+    location /page-dep/ {
+   return 301 https://pre.quboqu.com;
+    }
+    location /js/ {
+   return 301 https://pre.quboqu.com;
+    }
+    location /images/ {
+   return 301 https://pre.quboqu.com;
+    }
+    location /fonts/ {
+   return 301 https://pre.quboqu.com;
+    }
+    location /css/ {
+        return 301 https://pre.quboqu.com;
+    }
+}
+
+server {
+    listen       81;
+    server_name  localhost;
+
+
+    location / {
+        return 301 https://pre.quboqu.com;
+    }
+}

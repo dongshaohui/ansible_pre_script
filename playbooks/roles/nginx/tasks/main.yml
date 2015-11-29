@@ -1,0 +1,13 @@
+---
+
+#- name: install epel
+#  yum: name=http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm state=present
+
+- name: install nginx
+  yum: name=nginx state=present
+
+- name: add nginx start on boot
+  shell: /sbin/chkconfig --add nginx
+
+- name: turn on nginx start on boot
+  shell: /sbin/chkconfig nginx on

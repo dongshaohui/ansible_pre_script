@@ -1,0 +1,13 @@
+---
+- name: clean yum dbcache
+  command: yum clean dbcache
+
+- name: install wget
+  yum: name=wget state=present
+
+- include: install.yml
+
+- include: master.yml
+
+- include: sentinel.yml
+  when: redis_sentinel

@@ -1,0 +1,6 @@
+- hosts: conf_migration
+  sudo: yes
+  roles:
+    - java
+    - flyway.migration
+    - conf.migration

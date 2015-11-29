@@ -1,0 +1,27 @@
+- hosts: cms-author
+ sudo: yes
+ vars:
+   - http_port: 9090
+   - https_port: 8043
+   - admin_username: rndy
+   - admin_password: rndy
+   - magnolia_author: true
+   - magnolia_publisher: false
+ roles:
+   - java
+   - tomcat
+   - magnolia
+
+- hosts: cms-publisher
+ sudo: yes
+ vars:
+   - http_port: 9090
+   - https_port: 8043
+   - admin_username: rndy
+   - admin_password: rndy
+   - magnolia_author: false
+   - magnolia_publisher: true
+ roles:
+   - java
+   - tomcat
+   - magnolia

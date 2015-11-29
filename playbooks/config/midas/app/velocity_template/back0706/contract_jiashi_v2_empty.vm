@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<script type="text/javascript">
+    document.oncontextmenu = function (e) {
+        return false;
+    }
+</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>金融资产收益权转让协议</title>
+    <style type="text/css">
+        body {
+            font-family: SimSun;
+            -moz-user-select: none;
+        }
+
+        wrap {
+            white-space: normal;
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        table {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        td {
+            border: 1px solid #000000;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .row {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            position: absolute;
+            left: 0;
+        }
+
+        .paddingLeft {
+            padding-left: 72px;
+        }
+
+        .paddingLeft2 {
+            padding-left: 34px;
+        }
+
+        .paddingLeft3 {
+            padding-left: 86px;
+        }
+
+        .underline {
+            display: inline-block;
+            border-bottom: 1px solid #000000;
+        }
+
+        #content {
+            margin-left: auto;
+            margin-right: auto;
+            width: 680px;
+        }
+
+        .alignCenter {
+            text-align: center;
+        }
+
+        .alignRight {
+            text-align: right;
+        }
+
+        .font-bold {
+            font-family: SimHei;
+        }
+
+        @page {
+            margin-bottom: 70px;
+            counter-increment: page;
+
+            @bottom-center {
+                content: counter(page) " / " counter(pages);
+            }
+        }
+
+    </style>
+</head>
+<body onselectstart="return false">
+<h1 class="alignCenter font-bold">金融资产收益权转让协议</h1>
+
+<h2 class="alignCenter font-bold">$!{unitTool.formatSubjectTitle(${contract.subject.catalog})}-$!{contract.subject.title}</h2>
+
+<div class="alignCenter width=100%">协议编号：
+    <p class="underline" style="width: 32%;">&nbsp;$!{contract.contractId}</p>
+</div>
+<p>甲方（受让方）：</p>
+<table style="table-layout: fixed;width:100% " class="alignCenter">
+    <thead>
+    <tr>
+        <th width="15%">
+            姓名
+        </th>
+        <th width="25%">
+            身份证号
+        </th>
+        <th width="20%">
+            会员编号
+        </th>
+        <th width="22%">
+            用户名
+        </th>
+        <th width="18%">
+            联系电话
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        #foreach($additionalContract in ${contract.additionalContracts})
+        <tr>
+            <td class="alignCenter">$!{additionalContract.user.certification.certifiedName}</td>
+            <td class="alignCenter">${additionalContract.user.certification.certifiedIdentity}</td>
+            <td class="alignCenter">$!{additionalContract.user.userid}</td>
+            <td class="alignCenter">$!{additionalContract.user.username}</td>
+            <td class="alignCenter">$!{additionalContract.user.phone}</td>
+        </tr>
+        #end
+    </tbody>
+</table>
+
+<div style="margin-top: 5%;">乙方（转让方）:
+    <p class="underline" style="width: 32%;">&nbsp;$!{contract.owner.organizationName}</p>；
+</div>
+
+<div>组织机构代码证:
+    <p class="underline" style=" width: 32%;">&nbsp;$!{contract.owner.organizationCode}</p>；
+</div>
+<div>会员编号:
+    <p class="underline" style="width: 39%;">&nbsp;$!{contract.owner.userId}</p>；
+</div>
+<div>用户名:
+    <p class="underline" style="width: 41%;">&nbsp;$!{contract.owner.username}</p>；
+</div>
+<div>联系方式:
+    <p class="underline" style="width: 39%;">&nbsp;$!{contract.owner.organizationContactPhone}</p>。
+</div>
+<br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br />
+
+
+<p class="alignCenter font-bold title">第一章 收益权转让协议</p>
+
+<div class="row">
+    <div class="font-bold column">第一条</div>
+    <div class="paddingLeft">
+        经由嘉实金融信息服务(杭州)有限公司（简称“嘉实金服”）居间撮合，甲乙双方协商，一致同意由甲方受让乙方持有的金融资产收益权，现就相关事宜达成本《金融资产收益权转让协议》（简称“本协议”），以期共同遵守。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二条</div>
+    <div class="paddingLeft">
+        甲方为符合中华人民共和国法律（简称“中国法律”）规定的具有完全民事权利能力和民事行为能力，独立行使和承担本协议项下权利义务的自然人，愿意以自有资金向乙方受让金融资产收益权，享受相应利益并承担相应风险。甲方为在“嘉石榴”注册的特定用户。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三条</div>
+    <div class="paddingLeft">
+        乙方为在中华人民共和国境内注册的企业，愿意按照“嘉实金服”的相关业务规则提出金融资产收益权转让需求，并在满足本协议约定条件下向“嘉石榴”注册的特定用户转让金融资产收益权并接受甲方委托对金融资产进行持续管理。
+    </div>
+</div>
+
+<div class="row">
+    <div class="font-bold column">第四条</div>
+    <div class="paddingLeft">
+        本协议项下甲方、乙方单独称“一方”，合称“双方”。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第二章 金融资产收益权转让要素</p>
+
+<table style="table-layout: fixed;width: 100%;">
+    <tr>
+        <td colspan="6">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                甲方（受让方）受让信息</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="font-bold alignCenter wrap" style="width: 10%;">姓名</td>
+        <td class="font-bold alignCenter wrap" style="width: 25%;">用户名</td>
+        <td class="font-bold alignCenter wrap" style="width: 5%;">身份证号</td>
+        <td class="font-bold alignCenter wrap" style="width: 15%;">投资本金(元)*</td>
+        <td class="font-bold alignCenter wrap" style="width: 10%;">受让比例(%)*</td>
+        <td class="font-bold alignCenter wrap" style="width: 15%;">预期应得收益(元)*</td>
+    </tr>
+    #foreach($additionalContract in ${contract.additionalContracts})
+        <tr>
+            <td class="alignCenter wrap">$!{additionalContract.user.certification.certifiedName}</td>
+            <td class="alignCenter wrap">$!{additionalContract.user.username}</td>
+            <td class="alignCenter wrap">$!{unitTool.formatString(${additionalContract.user.certification.certifiedIdentity})}</td>
+            <td class="alignCenter wrap">$!{moneyTool.formatMoney(${additionalContract.investAmount})}</td>
+            <td class="alignCenter wrap">$!{numberTool.percentageFormat(${additionalContract.investRatio})}</td>
+            <td class="alignCenter wrap">$!{moneyTool.formatMoney(${additionalContract.prospectiveEarnings})}</td>
+        </tr>
+    #end
+    <tr>
+        <td class="alignRight" colspan="3">
+            <p class="font-bold" style="display: inline;">合计</p>
+        </td>
+        <td class="alignCenter">
+            #set($total = 0)
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($total = $total + $additionalContract.investAmount.amount)
+            #end
+            #if($total > 0)
+                ${total}
+            #end
+        </td>
+        <td class="alignCenter">
+            #set($totalPercent = 0)
+
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($totalPercent = $totalPercent + $additionalContract.investRatio)
+            #end
+            $!{numberTool.percentageFormat(${totalPercent})}
+        </td>
+        <td class="alignCenter">
+            #set($total = 0)
+            #foreach($additionalContract in ${contract.additionalContracts})
+                #set($total = $total + $additionalContract.prospectiveEarnings.amount)
+            #end
+            #if($total > 0)
+                ${total}
+            #end
+        </td>
+    </tr>
+</table>
+
+<table style="table-layout: fixed;width: 100%;">
+    <tr>
+        <td colspan="4">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                乙方（转让方）信息
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">公司名称</td>
+        <td class="alignCenter">$!{contract.owner.organizationName}</td>
+        <td class="alignCenter">“嘉石榴”用户名</td>
+        <td class="alignCenter">$!{contract.owner.username}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">组织机构代码证号</td>
+        <td class="alignCenter" colspan="3">$!{contract.owner.organizationCode}</td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <p class="font-bold" style="padding-left: 10px;display: inline-block;">
+                转让信息
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">金融资产描述*</td>
+        <td class="alignCenter" colspan="3">$!{contract.loaneeInformation.usage}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">乙方金融资产持有起始日</td>
+        <td class="alignCenter">$!{date.format('yyyy年MM月dd日', $contract.subject.config.financialAssetsHeldInceptionDate)}</td>
+        <td class="alignCenter">乙方金融资产持有终止日</td>
+        <td class="alignCenter">$!{date.format('yyyy年MM月dd日', $contract.subject.config.financialAssetsHeldTerminationDate)}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">转让总额*</td>
+        <td class="alignCenter">$!{contract.subject.currentInvestmentAmount.amount}</td>
+        <td class="alignCenter">剩余期限</td>
+        <td class="alignCenter">
+            $!{contract.remainingTerm.count}
+            $!{unitTool.toChineseUnit($!{contract.remainingTerm.unit})}
+        </td>
+    </tr>
+    <tr>
+        <td class="alignCenter">甲方预期年化收益率</td>
+        <td class="alignCenter">$!{number.format("percent", $contract.subject.rate)}</td>
+        <td class="alignCenter">转让生效日</td>
+        <td class="alignCenter">$!{date.format('yyyy年MM月dd日', $contract.effectDate)}</td>
+    </tr>
+    <tr>
+        <td class="alignCenter" rowspan="2">向甲方支付本金及收益的方式</td>
+        <td>▅到期一次性支付本金及收益；</td>
+        <td class="alignCenter">预计支付日</td>
+        <td class="alignCenter">乙方金融资产持有终止日后的_______日内，即不晚于________年____月____日</td>
+    </tr>
+    <tr>
+        <td>□按（季/月）支付期间收益，到期支付投资本金；</td>
+        <td class="alignCenter">预计支付日</td>
+        <td class="alignCenter">乙方收到金融资产利益后的____日内，即期间收益不晚于每（季末月/月）_____日，投资本金不晚于________年____月____日</td>
+    </tr>
+    <tr>
+        <td class="alignCenter">预期到期应支付款项总额*</td>
+        <td class="alignCenter" colspan="3">合计：$!{moneyTool.sumMoney(${contract.prospectiveInterest}, ${contract.prospectivePrincipal})}元，其中转让总额：$!{moneyTool.formatMoney(${contract.prospectivePrincipal})}元，收益：$!{moneyTool.formatMoney(${contract.prospectiveInterest})}元。</td>
+    </tr>
+</table>
+<br/>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        注:
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        1. 标注*的信息以“嘉石榴”系统生成的最终数据为准。甲方在本协议项下发布期内多次受让的，甲方投资本金为历次投资本金之和；
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        2. 甲方预期应得款项信息仅供参考，以最终实际收款金额为准。
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        3. 一般情况下，“嘉石榴”将乙方支付的到期应支付款项总额按甲方预期应得款项向甲方进行分配。乙方到期应支付款项总额与甲方预期应得款项合计之间，因进位算法可能产生的差额部分，多出部分归“嘉石榴”所有，缺少部分由“嘉石榴”负责补足，基于上述原因造成的甲方预期应得款项与实际收款金额不一致的，以实际收款金额为准。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第三章 定义与解释</p>
+
+<div class="row">
+    <div class="font-bold column">第五条</div>
+    <div class="paddingLeft">
+        定义
+    </div>
+</div>
+<div class="row">
+    <div class="colum">
+        除非甲乙双方另有约定，本协议下列术语定义如下：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        “嘉石榴”：是指由嘉实金服开发、管理并运营的，向注册会员用户提供投融资信息发布与管理、投融资交易管理、交易资金结算（由支付机构提供）等服务的金融信息中介服务平台。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        转让方/乙方：是指直接或间接向嘉实金服提出金融资产收益权转让需求，进而通过“嘉石榴”定向向“嘉石榴”的注册用户发布该转让需求，并在满足特定条件时完成转让获得交易对价的自然人或法人。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        受让方/甲方：是指经嘉实金服居间撮合，向通过“嘉石榴”提出金融资产收益权转让需求的转让方支付交易对价并享受相应利益的自然人。受让方为在“嘉石榴”注册的特定用户。受让方为多人时，每位受让人按受让比例享有金融资产收益权。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        支付机构：是指为“嘉石榴”的用户提供资金结算等服务的机构，由嘉实金服具体指定。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        支付结算账户：是指经乙方和甲方申请，在支付机构或嘉实金服开立的，用于查询、划转或收取本协议项下相应款项的账户。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        转让总额：是指乙方根据其金融资产收益权转让需求拟通过“嘉石榴”向一个或多个甲方转让金融资产收益权并取得交易对价的总金额，该金额以“嘉石榴”具体发布展示及相应记录为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        金融资产/标的金融资产：指乙方在发布本协议之转让需求时合法持有或确认可于转让生效日或之前合法持有并根据本协议将其收益权向甲方转让的，预期可以产生财产性收入的资产。金融资产类型包括但不限于信托计划受益权、资产管理计划份额、贷款债权等。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        金融资产收益权：是指获取标的金融资产管理、运用、处置所产生的财产性利益以及因标的金融资产产生或与标的金融资产相关的其他任何财产性利益的权利。标的金融资产利益包括但不限于基于（1）标的金融资产的分红收入；（2）标的金融资产处置、转让所得；及（3）标的金融资产产生的其他收入。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        金融资产持有起始日：是指金融资产收益权转让方（本协议项下为乙方）以包括但不限于委托、投资、贷款、受让等方式取得金融资产的日期。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        金融资产持有终止日：是指金融资产收益权转让方（本协议项下为乙方）持有的金融资产因发生包括但不限于到期、转让等情形而终止的日期。
+    </div>
+</div>
+<div class="row">
+    <div class="column">11.</div>
+    <div class="paddingLeft2">
+        受让比例：是指本协议项下每位甲方所受让的金融资产收益权占乙方所转让的标的金融资产收益权的比例，受让比例不低于0.5%。
+    </div>
+</div>
+<div class="row">
+    <div class="column">12.</div>
+    <div class="paddingLeft2">
+        发布期：是指乙方在“嘉石榴”发布转让需求的期限，该期限以“嘉石榴”具体发布展示及相应记录为准。
+    </div>
+</div>
+<div class="row">
+    <div class="column">13.</div>
+    <div class="paddingLeft2">
+        转让生效日：是指乙方根据本协议约定获得金融资产收益权交易对价的日期，该日期以本协议约定为准。
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">14.</div>
+    <div class="paddingLeft2">
+        预计支付日：是指乙方根据本协议的约定预计将所转让的金融资产收益权对应利益向甲方进行支付的日期。如乙方延期收到金融资产的相关利益，则实际支付日相应顺延。
+    </div>
+</div>
+<div class="row">
+    <div class="column">15.</div>
+    <div class="paddingLeft2">
+        预期应得款项：是指甲方根据本协议的约定预期能获得的全部利益，包括甲方投资本金以及预期应得收益，具体金额以实际收款为准，嘉实金服不对其提供任何担保或承诺。
+    </div>
+</div>
+<div class="row">
+    <div class="column">16.</div>
+    <div class="paddingLeft2">
+        预期年化收益率：是指乙方所转让的标的金融资产预期所产生收益减去乙方收取的管理费用后的部分占转让总额的年化比例。上述预期年化收益率仅为金融资产正常运作、兑付时，对受让方可能获得的最高收益数额的估算。嘉实金服、“嘉石榴”及乙方对受让方可获得的预期收益不作任何承诺或保证，也不保证受让方的投资本金不受损失。
+    </div>
+</div>
+<div class="row">
+    <div class="column">17.</div>
+    <div class="paddingLeft2">
+        工作日：是指嘉实金服的正常营业日（不包括中国的法定公休日和节假日）。
+    </div>
+</div>
+<div class="row">
+    <div class="column">18.</div>
+    <div class="paddingLeft2">
+        自然日：是指日历日，包括工作日和非工作日。
+    </div>
+</div>
+<div class="row">
+    <div class="column">19.</div>
+    <div class="paddingLeft2">
+        管理费用：是指甲方委托乙方对标的金融资产进行持续管理所支付的费用，管理费用由乙方在标的金融资产所产生的财产性利益中直接扣收。
+    </div>
+</div>
+<div class="row">
+    <div class="column">20.</div>
+    <div class="paddingLeft2">
+        服务费：是指双方因使用“嘉石榴”所提供的金融信息服务而向嘉实金服支付的相关费用。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第六条</div>
+    <div class="paddingLeft">
+        本协议所涉及的金额均精确到分位，分位以下的金额采用银行家算法（四舍六入五看前，奇进偶舍）；本协议所涉及到的百分比均采用四舍五入的方式保留小数点后两位。
+    </div>
+</div>
+
+<div class="row">
+    <div class="font-bold column">第七条</div>
+    <div class="paddingLeft">
+        本协议未作定义或约定的词语，以“嘉石榴”所发布或展示时列示的为准，如未予列示，按照相关法律、法规或行业惯例解释。
+    </div>
+</div>
+
+
+<p class="alignCenter font-bold title">第四章 金融资产收益权转让</p>
+
+<div class="row">
+    <div class="font-bold column">第八条</div>
+    <div class="paddingLeft">
+        乙方将其合法拥有的金融资产收益权向一个或多个甲方进行转让。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第九条</div>
+    <div class="paddingLeft">
+        标的金融资产应符合以下条件：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        由乙方在发布本协议之转让需求时合法持有或确认可于转让生效日或之前合法持有，且预期可产生现金利益；
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        未被质押、转让给任何第三方，未设定任何权利负担；
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        尚未到期。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十条</div>
+    <div class="paddingLeft">
+        转让流程如下：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        乙方和甲方同意并确认，各方通过自行或授权有关方根据“嘉石榴”有关规则和说明，在“嘉石榴”进行转让需求发布和投资操作等方式签署本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        甲方理解并同意，在以点击确认投资按钮签署本协议的同时，嘉实金服即有权将甲方在“嘉石榴”账户中的资金进行冻结，冻结金额等同于甲方确认的投资本金金额，该冻结将在本协议确定失效时解除。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        本协议在第二章所列示的转让生效日生效，转让生效日及之后标的金融资产产生的利益由甲方根据受让比例享有。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        乙方和甲方理解并同意，在本协议生效的同时，嘉实金服即有权将冻结资金划转至乙方的支付结算账户中，划转完毕即视为转让行为完成，乙方是否提取及使用资金不影响本协议效力。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十一条</div>
+    <div class="paddingLeft">
+        甲方应于转让生效日前向乙方支付本协议约定的投资本金。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十二条</div>
+    <div class="paddingLeft">
+        在甲方根据本协议的约定足额支付投资本金的前提下，嘉实金服及支付机构根据甲方的授权将投资本金自甲方支付结算户划转至乙方支付结算账户，本协议项下金融资产收益权的转让于转让生效日成立。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十三条</div>
+    <div class="paddingLeft">
+        甲方理解并同意投资本金从其银行账户或支付结算账户划出之日起至转让生效日（不含）之间可能存在一定时间，在这一时间内不享受标的金融资产的任何收益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十四条</div>
+    <div class="paddingLeft">
+        如在发布期内未征集到预期的转让总额，且乙方同意按发布期内实际征集到的投资本金总额进行转让的，全体受让方同意按照发布期内实际征集到的投资本金总额受让相等金额的金融资产收益权。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十五条</div>
+    <div class="paddingLeft">
+        如因以下原因导致乙方与甲方之间的转让交易不能如期成立的，经“嘉石榴”公告，本协议终止，乙方与甲方互不承担法律责任，嘉实金服将于公告发布之日起三个工作日内将甲方已被冻结之资金予以解冻：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        在发布期内未征集到预期的转让总额，且乙方不同意按实际征集款项转让金融资产收益权的；
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        在发布期内乙方确认无法按预期持有拟转让的金融资产，或拟转让的金融资产发生不能按期兑付的情形或其他权利瑕疵；
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        在发布期内乙方单方面取消转让申请；
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        其他嘉实金服认为有必要终止借款的情况。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十六条</div>
+    <div class="paddingLeft">
+        在金融资产存续期内，经嘉实金服同意，甲方可以且仅可以通过“嘉石榴”将本协议项下权利义务进行再次转让，并通过“嘉石榴”通知乙方。该转让的具体方式以“嘉石榴”发布的相关业务规则为准。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第五章 金融资产管理服务</p>
+
+<div class="row">
+    <div class="font-bold column">第十七条</div>
+    <div class="paddingLeft">
+        本协议项下收益权转让生效后，甲方委托乙方对标的金融资产在存续期内进行持续管理，该管理的内容包括但不限于对金融资产的存续情况进行监控；履行金融资产持有人的相关权利义务；与金融资产发行人或管理人进行沟通敦促利益实现；判断是否接受金融资产发行人或管理人提前分配利益；参与诉讼及类似程序；处置金融资产；保存档案；将收到的金融资产相关利益向甲方进行划转等。
+    </div>
+</div>
+
+<div class="row">
+    <div class="font-bold column">第十八条</div>
+    <div class="paddingLeft">
+        如为管理该等金融资产所需且经乙方要求，甲方应向乙方另行出具适当的委托授权文件及其他必要的资料，以便利乙方执行上述委托事项。甲方同意并确认，乙方按照前款规定对金融资产进行管理的全部结果应归属于甲方。乙方不因对金融资产进行管理而额外承担责任。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第十九条</div>
+    <div class="paddingLeft">
+        甲方理解并同意，尽管乙方提供金融资产管理服务，但仍存在金融资产投资失败、收益无法按预期实现的风险，甲方自行承担该等风险及相应损失。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十条</div>
+    <div class="paddingLeft">
+        乙方对其提供的管理服务向所有甲方收取管理费用。乙方向多个甲方转让金融资产收益权的，每位甲方根据其受让比例承担管理费用。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十一条</div>
+    <div class="paddingLeft3">
+        乙方和甲方一致同意，乙方所收取的管理费用从乙方应向甲方支付的金融资产利益中扣减，管理费用为金融资产利益中扣除甲方预期应得款项后的余额，如金融资产取得的利益不足以支付甲方预期应得款项的，乙方不再收取管理费用。
+    </div>
+</div>
+<p class="alignCenter font-bold title">第六章 利益支付</p>
+<div class="row">
+    <div class="font-bold column">第二十二条</div>
+    <div class="paddingLeft3">
+        乙方应于收到金融资产产生的财产性利益后，在预计支付日12:00前将当期的应支付款项资金划转至以下银行账户并不可撤销地授权嘉实金服及支付机构将当期应支付款项资金划转至甲方支付结算账户。
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        应支付款项资金划入以下账户：<br />
+        户名：嘉实金融信息服务（杭州）有限公司
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        开户行：工商银行朝内大街支行
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        账号：0200211119000012191
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十三条</div>
+    <div class="paddingLeft3">
+        在金融资产按预期兑付利益的情况下，甲方按本协议第二章所列示的甲方预期收益率享有金融资产产生的利益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十四条</div>
+    <div class="paddingLeft3">
+        在金融资产未按预期兑付利益的情况下，乙方向多个甲方转让金融资产收益权的，甲方按受让比例享有金融资产实际产生的利益，如果前述利益少于甲方预期应得款项的，乙方不收取管理费用。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十五条</div>
+    <div class="paddingLeft3">
+        甲方理解并同意，因乙方所持有的金融资产提前变现或延期变现，乙方有可能提前或延后向甲方支付相应利益。在提前支付的情况下，乙方应于实际支付日后3个工作日内通知嘉实金服并通过“嘉石榴”通知甲方；在延后支付的情况下，乙方应于预计支付日后3个工作日内通知嘉实金服并通过“嘉石榴”通知甲方。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十六条</div>
+    <div class="paddingLeft3">
+        甲方理解并同意，由于银行或第三方支付机构操作时间的原因，乙方支付应支付款项与甲方支付结算账户收到资金的日期可能不一致，最终将本协议项下的利益划转至出甲方支付结算账户通常需要1-3个工作日，在该期间内不产生任何投资利益。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十七条</div>
+    <div class="paddingLeft3">
+        在乙方未收到金融资产相应利益的情况下，甲方无权要求乙方或嘉实金服垫付。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第二十八条</div>
+    <div class="font-bold paddingLeft3">
+        虽有前述各款约定，甲方再次确认：甲方同意乙方向其支付的利益以乙方实际收到的金融资产全部现金利益扣减为实现该等利益所产生的必备费用及乙方应收取的管理费后的剩余部分为限。必备费用包括但不限于支付机构收取的支付结算服务费、保护和实现特定资产现金利益而支出的诉讼费、仲裁费、律师费、会计费等。每位甲方根据本协议约定之受让比例享有金融资产所产生的利益。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第七章 权利与义务</p>
+
+<div class="row">
+    <div class="font-bold column">第二十九条</div>
+    <div class="paddingLeft3">
+        甲方的权利义务包括：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        甲方承诺向“嘉石榴”提供的信息合法、真实、及时、有效，用于受让本协议项下金融资产收益权的资金来源合法且具有自主支配权利；
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        甲方同意以网络页面点击确认的方式签订本协议，并不以此为由拒绝履行本协议项下的义务，即便在签订时本协议并没有金融资产收益权转让总额等信息。甲方同意以前述方式签订本协议后即视为不可撤销及不可变更地授权嘉实金服根据最终撮合结果自主生成前述信息，且未经乙方及嘉实金服的同意，甲方不得否认本协议所约定的受让行为或以任何方式撤回、撤销本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        甲方有权依本协议约定享有金融资产产生的财产性利益。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        甲方同意委托乙方对本协议项下金融资产进行持续管理并有义务向乙方支付管理费用。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        甲方同意并授权嘉实金服根据本协议向支付机构出具必要的交易指令，并授权嘉实金服及/或支付机构根据该指令从其银行账户或支付结算账户中划转相应的投资本金至乙方的指定银行账户或支付结算户从而完成交易。甲方有义务确保其签署本协议之前在本协议约定的银行账户或支付结算户中留有足够的资金以完成资金扣划及款项支付。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        甲方同意，在乙方授权嘉实金服根据本协议将金融资产相应利益划转至甲方支付结算账户后即视为乙方已履行支付义务。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        甲方必须通过本协议约定的方式或嘉实金服及支付机构所认可的方式进行款项支付，否则由此引起的法律后果及违约责任由甲方自行承担。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        甲方应保证其支付结算账户及银行账户状态正常，以确保资金划出、划入交易顺利完成。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        甲方在交易及持有金融资产收益权过程中产生的相关税费，由甲方自行向主管税务机关申报、缴纳。如果法律法规规定“嘉石榴”具有代扣代缴义务，则“嘉石榴”有权直接代扣代缴并向甲方提供纳税凭证。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        甲方已阅读了本协议的风险提示，并完全理解其可能面临的风险，理解并同意嘉实金服不承担本协议项下甲方任何资金损失的风险。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十条</div>
+    <div class="paddingLeft3">
+        乙方的权利义务包括：
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        乙方承诺向“嘉石榴”提供的信息合法、真实、及时、有效。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        乙方同意以网络页面点击确认等方式签订本协议，并不以此为由拒绝履行本协议项下的义务，即便在签订时本协议并没有甲方的信息、签订日期信息等。乙方同意以前述方式签订本协议后即视为不可撤销及变更地授权嘉实金服根据最终撮合结果自主生成前述信息，且未经甲方及嘉实金服的同意，乙方不得否认本协议所约定的转让行为或以任何方式撤回、撤销本协议。
+    </div>
+</div>
+<div class="row">
+    <div class="column">3.</div>
+    <div class="paddingLeft2">
+        乙方有义务依本协议约定向甲方支付金融资产所产生的财产性利益。
+    </div>
+</div>
+<div class="row">
+    <div class="column">4.</div>
+    <div class="paddingLeft2">
+        乙方有应根据甲方委托持续管理本协议项下金融资产并有权收取相应管理费用。
+    </div>
+</div>
+<div class="row">
+    <div class="column">5.</div>
+    <div class="paddingLeft2">
+        乙方同意并授权嘉实金服根据本协议向支付机构出具交易指令，以及支付机构根据该指令将交易对价资金划付至乙方的指定账户即视为甲方履行完成支付义务。
+    </div>
+</div>
+<div class="row">
+    <div class="column">6.</div>
+    <div class="paddingLeft2">
+        乙方必须通过本协议约定或嘉实金服及支付机构所认可的方式支付应付款项，否则由此引起的法律后果及违约责任由乙方自行承担。
+    </div>
+</div>
+<div class="row">
+    <div class="column">7.</div>
+    <div class="paddingLeft2">
+        乙方应保证其支付结算账户及银行账户状态正常，以确保资金划出、划入交易顺利完成。
+    </div>
+</div>
+<div class="row">
+    <div class="column">8.</div>
+    <div class="paddingLeft2">
+        乙方同意、授权并配合嘉实金服采取份额冻结、利益分配账户监管等控制措施，控制本协议所约定的金融资产的利益；转让承诺在向甲方支付应付款项前，本协议所约定的金融资产所产生的任何利益均不予以提取，除非用于支付本协议项下应付款项。尽管有上述约定，嘉实金服不承诺上述控制措施有效，也不因采取上述控制措施而承担任何法律责任。
+    </div>
+</div>
+<div class="row">
+    <div class="column">9.</div>
+    <div class="paddingLeft2">
+        乙方有义务向嘉实金服支付服务费。
+    </div>
+</div>
+<div class="row">
+    <div class="column">10.</div>
+    <div class="paddingLeft2">
+        当乙方持有的本协议项下金融资产出现影响金融资产兑付的重大不利情形时，乙方应及时通知嘉实金服并授权嘉实金服通过“嘉石榴”向甲方等相关方进行披露。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第八章 信息披露</p>
+
+<div class="row">
+    <div class="font-bold column">第三十一条</div>
+    <div class="paddingLeft3">
+        乙方及甲方同意嘉实金服根据本协议各方当事人的授权进行相关信息披露，嘉实金服进行信息披露将采用以下一种或几种形式：
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        1. 网站公告；
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        2. 系统通知；
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        3. 传真、电子邮件等其他方式
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        如乙方或甲方留有传真号、电子邮箱、固定电话、移动电话等联系方式的，嘉实金服也可通过传真、电子邮件、电话、短信等方式将信息告知乙方或甲方。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十二条</div>
+    <div class="paddingLeft3">
+        信息披露的内容
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        事件通知
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (1) 交易确认通知
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        乙方与甲方经“嘉石榴”订立的本转让协议生效后，“嘉石榴”向乙方和甲方发送交易确认通知，通知内容包括各甲方投资本金的金额、转让生效日、预期支付日等。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (2) 交易取消通知
+    </div>
+</div>
+
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        因本协议第十五条所述原因导致交易不成功时，“嘉石榴”向乙方和甲方发送交易取消通知，通知内容包括交易不成功的原因、冻结资金解冻等。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column"></div>
+    <div class="paddingLeft2">
+        (3) 资金支付通知
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        当利益资金到达甲方支付结算账户后，“嘉石榴”向甲方发送资金支付通知，通知内容包括应分配给甲方的投资本金、收益等。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        临时通知
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft3">
+        当乙方持有的金融资产或收益权发生影响其按预期兑付的事件时，“嘉石榴”向甲方发送临时通知。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第九章 法律责任</p>
+
+<div class="row">
+    <div class="font-bold column">第三十三条</div>
+    <div class="paddingLeft3">
+        乙方以非法占有为目的，虚构事实或者隐瞒真相，向甲方和“嘉石榴”提供虚假文件资料或者对甲方和“嘉石榴”进行虚假不实、严重误导或重大遗漏的陈述或者诱导，侵犯公私财产所有权，构成犯罪的，应当承担刑事责任。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十四条</div>
+    <div class="paddingLeft3">
+        乙方、甲方均承诺，不得利用“嘉石榴”进行信用卡套现、洗钱或其他违法违纪行为，否则应依法自行承担由此产生的法律责任与后果。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第十章 风险提示</p>
+
+<div class="row">
+    <div class="font-bold column">第三十五条</div>
+    <div class="paddingLeft3">
+        市场风险
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        由于宏观经济形势或有关法律、法规及相关政策、规则发生变化，可能引起价格等方面的异常波动，甲方有可能遭受损失。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十六条</div>
+    <div class="paddingLeft3">
+        金融资产投资失败风险
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        如果标的金融资产因投资失败等原因出现无法或未能正常兑付的情况，甲方有可能受到损失，甲方应自行承担投资本金及预期收益无法收回或实现的风险。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        在金融资产到期日，当金融资产未按预期兑付时，乙方将以乙方认为适当的方式要求金融资产发行人或管理人履行相关义务、参与诉讼或类似程序、处置金融资产等，在此过程中，甲方有可能延期收到相关款项。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十七条</div>
+    <div class="paddingLeft3">
+        信用风险
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        信用风险主要是乙方的违约风险。乙方可能在向甲方转让金融资产收益权之后再次向第三方转让金融资产收益权或在金融资产之上设定权利限制，也可能在受到金融资产产生的财产性利益之后未根据本协议约定向甲方划付，从而对甲方投资产生影响。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十八条</div>
+    <div class="paddingLeft3">
+        操作或技术风险
+    </div>
+</div>
+<div class="row">
+    <div class="column">1.</div>
+    <div class="paddingLeft2">
+        在金融资产收益权转让交易过程中及存续期间，因不可预测或无法控制的系统故障、设备故障、通讯故障、停电等突发事故将有可能给甲方造成一定损失。因上述事故造成交易或交易数据中断，恢复交易时以事故发生前系统最终记录的交易数据为有效数据。
+    </div>
+</div>
+<div class="row">
+    <div class="column">2.</div>
+    <div class="paddingLeft2">
+        由于甲方密码失密、操作不当、委托他人代理交易、决策失误、长期不关注账户信息、黑客攻击、他人恶意操作等原因可能会造成甲方损失。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第三十九条</div>
+    <div class="paddingLeft3">
+        不可抗力风险
+    </div>
+</div>
+<div class="row">
+    <div class="column"></div>
+    <div class="paddingLeft2">
+        由于自然灾害、战争、法律法规或政策等无法避免或无法控制的不可抗力因素的出现，将影响市场的正常运行，甲方有可能遭受损失。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十条</div>
+    <div class="paddingLeft3">
+        以上风险揭示并不能揭示本次金融资产收益权转让交易的全部风险及市场的全部情形。甲方在做出交易决策前，应通过嘉石榴公布的信息及其他相关公告了解拟本次金融资产收益权转让交易的风险收益特征和产品特性，并根据自身的交易目标、风险承受能力和资产状况等理性判断市场，谨慎做出投资决策，并自行承担全部风险。
+    </div>
+</div>
+
+<p class="alignCenter font-bold title">第十一章 其他事项</p>
+
+<div class="row">
+    <div class="font-bold column">第四十一条</div>
+    <div class="paddingLeft3">
+        本协议项下的金融资产收益权转让申请材料与本协议相关的通知、证明、凭证、函电等附件均是本协议不可分割的组成部分，具有同等法律效力，对本协议双方均有法律约束力。本协议任何条款的标题仅为方便援引和阅读而设置，不得被用于解释本协议任何条款的依据。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十二条</div>
+    <div class="paddingLeft3">
+        乙方和甲方均同意并确认，乙方、甲方通过“嘉石榴”和银行账户采取的行为所产生的法律效果和法律责任归属于乙方、甲方本人；乙方、甲方授权和委托嘉实金服和“嘉石榴”根据本协议所采取的全部行动和措施的法律后果均归属于乙方、甲方本人，与嘉实金服和“嘉石榴”无关，嘉实金服和“嘉石榴”也不因此承担任何责任。在任何情形下，嘉实金服和“嘉石榴”不是本协议项下任何交易的一方或任何债务的债务人。嘉实金服和“嘉石榴”不需要以其自有资金偿还本协议项下的任何款项。嘉实金服和“嘉石榴”不是本协议项下交易的担保人。嘉实金服和“嘉石榴”无义务以其自有资金承担担保责任。乙方和甲方同意，嘉实金服和“嘉石榴”有权就其为乙方和甲方提供的服务收取服务费。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十三条</div>
+    <div class="paddingLeft3">
+        本协议各方委托“嘉石榴”保管所有与本协议有关的书面文件或电子信息，乙方和甲方双方已认真阅读并完全理解本协议所有内容并自愿按本协议相关约定履行各自的权利义务。本协议项下交易记录等信息均以“嘉石榴”生成并公布的内容为准，乙方和甲方可以通过登录“嘉石榴”账户进行查询。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十四条</div>
+    <div class="paddingLeft3">
+        本协议经乙方、甲方通过“嘉石榴”以网络在线点击确认的方式签署，本协议的任何修改、补充均须以“嘉石榴”电子文本形式做出。乙方、甲方应妥善保管自己在“嘉石榴”的注册用户名和密码，自行承担因注册用户名和密码丢失、泄漏或允许他人使用产生的法律后果和经济后果。通过任何一方的用户名和密码登录网站后的任何操作均视为该方本人的真实意思表示，“嘉石榴”将予以确认。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十五条</div>
+    <div class="paddingLeft3">
+        本协议自乙方和甲方签署之日起成立，双方签署日非同一日的，以后签署协议的一方签署日期为准。自本协议约定的转让生效日生效，至本协议项下所有利益支付完成之日终止。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十六条</div>
+    <div class="paddingLeft3">
+        协议各方应对本协议的信息及内容予以保密，未经其他签约方一致同意，任何一方不得向协议主体之外的任何其他方披露，但法律、法规另有强制性规定，或因监管、审计等有权机关另有强制性要求的除外。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十七条</div>
+    <div class="paddingLeft3">
+        协议各方知悉并承诺遵守“嘉石榴”载明的其他相关服务协议，包括但不限于《“嘉石榴”网站服务协议（个人会员）》。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十八条</div>
+    <div class="paddingLeft3">
+        双方依照法律规定各自承担本协议订立和履行过程中发生的税费。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第四十九条</div>
+    <div class="paddingLeft3">
+        如任意一方发生不可抗力事件，该方应及时通知另一方，并在15日内提供证明文件说明有关事件的细节和不能履行或部分不能履行或需延迟履行本协议的原因。双方应在协商一致的基础上决定是否延期履行本协议、终止本协议，并达成书面协议。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第五十条</div>
+    <div class="paddingLeft3">
+        本协议中部分条款根据相关法律法规等的规定成为无效，或部分无效时，该等无效不影响本协议项下其他条款的效力，双方仍应继续履行其在本协议项下的义务。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第五十一条</div>
+    <div class="paddingLeft3">
+        本协议项下的附件和补充协议构成本协议不可分割的一部分。
+    </div>
+</div>
+<div class="row">
+    <div class="font-bold column">第五十二条</div>
+    <div class="paddingLeft3">
+        本协议受中华人民共和国法律管辖并按中华人民共和国法律解释。协议履行中发生争议，可由各方协商解决，协商不成的，应将争议提交至中国国际经济贸易仲裁委员会根据该会届时有效的仲裁规则通过仲裁解决，仲裁地点为北京。仲裁裁决是终局性的并对各方当事人具有约束力，仲裁费由败诉方承担。
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+{
+  "midas": {
+    "app": "midas",
+    "main_class": "com.thoughtworks.midas.jiashi.app.Server",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    }
+  },
+  "yeepay_withdraw": {
+    "app": "yeepay_withdraw",
+    "main_class": "com.thoughtworks.midas.withdraw.app.WithdrawServer",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "yeepay_withdraw"
+    },
+    "withdraw": {
+      "feed": {
+        "filter": "00:00",
+        "cron": "0/30 * * * * ?"
+      },
+      "cron": {
+        "send": "0 0 10 * * ?",
+        "query": "0/30 * * * * ?",
+        "notify": "0/30 * * * * ?"
+      }
+    }
+  },
+  "yeepay_withdraw_scheduler": {
+    "app": "yeepay_withdraw_scheduler",
+    "main_class": "com.thoughtworks.midas.withdraw.WithdrawApp",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "yeepay_withdraw"
+    },
+    "withdraw": {
+      "feed": {
+        "filter": "00:00",
+        "cron": "0/30 * * * * ?"
+      },
+      "cron": {
+        "send": "0 0 10 * * ?",
+        "query": "0/30 * * * * ?",
+        "notify": "0/30 * * * * ?"
+      }
+    }
+  },
+  "sms_scheduler": {
+    "app": "sms_scheduler",
+    "main_class": "com.thoughtworks.sms.SmsApp",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "sms"
+    },
+    "batch_amount": 100,
+    "sms": {
+      "cron": {
+        "send": "0/5 * * * * ?",
+        "event": "0/5 * * * * ?"
+      }
+    }
+  },
+  "subject_pass_scheduler": {
+    "app": "subject_pass_scheduler",
+    "main_class": "com.thoughtworks.midas.mvp.schedular.subject.pass.SubjectPassAndPortionFundedScheduler",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    },
+    "cron": "0 0/30 * * * ?",
+    "working_hour": "9:18"
+  },
+  "subject_shelf_scheduler": {
+    "app": "subject_shelf_scheduler",
+    "main_class": "com.thoughtworks.midas.mvp.schedular.subject.shelf.SubjectShelfScheduler",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    },
+    "cron": "0 0/10 * * * ?"
+  },
+  "contract_settle_scheduler": {
+    "app": "contract_settle_scheduler",
+    "main_class": "com.thoughtworks.midas.mvp.schedular.contract.settle.ContractSettleScheduler",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    },
+    "cron": "0 0/30 * * * ?",
+    "working_hour": "9:18"
+  },
+  "contract_delivery_scheduler": {
+    "app": "contract_delivery_scheduler",
+    "main_class": "com.thoughtworks.midas.mvp.schedular.contract.delivery.ContractDeliveryScheduler",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    },
+    "cron": "0 0/2 * * * ?",
+    "working_hour": "9:18"
+  },
+  "conf_migration": {
+    "app": "conf",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "conf"
+    }
+  },
+  "voucher_expire_scheduler": {
+    "app": "voucher_expire_scheduler",
+    "main_class": "com.thoughtworks.midas.mvp.schedular.voucher.expire.VoucherExpireScheduler",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "midas"
+    },
+    "cron": "0 0/2 * * * ?"
+  },
+  "ums": {
+    "app": "ums",
+    "main_class": "com.thoughtworks.ums.core.api.app.Server",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "ums"
+    }
+  },
+  "midas_admin": {
+    "app": "midas_admin",
+    "context_path": "admin",
+    "http_port": 8080,
+    "https_port": 8043,
+    "admin_username": "rndy",
+    "admin_password": "rndy",
+    "templates": [
+      {
+        "source": "midas_admin/template/log4j.properties",
+        "target": "admin/WEB-INF/classes/log4j.properties"
+      }
+    ]
+  },
+  "midas_front": {
+    "app": "midas_front",
+    "context_path": "ROOT",
+    "http_port": 8080,
+    "https_port": 8043,
+    "admin_username": "rndy",
+    "admin_password": "rndy",
+    "templates": [
+      {
+        "source": "midas_front/template/api.properties",
+        "target": "ROOT/WEB-INF/classes/api.properties"
+      },
+      {
+        "source": "midas_front/template/log4j.properties",
+        "target": "ROOT/WEB-INF/classes/log4j.properties"
+      },
+      {
+        "source": "midas_front/template/payment.properties",
+        "target": "ROOT/WEB-INF/classes/payment.properties"
+      },
+      {
+        "source": "midas_front/template/frontAuthentication.properties",
+        "target": "ROOT/WEB-INF/classes/frontAuthentication.properties"
+      },	
+      {
+        "source": "midas_front/template/tag.properties",
+        "target": "ROOT/WEB-INF/classes/tag.properties"
+      }
+    ]
+  },
+  "wechat": {
+    "app": "wechat",
+    "context_path": "wechat",
+    "http_port": 8080,
+    "https_port": 8043,
+    "admin_username": "rndy",
+    "admin_password": "rndy",
+    "templates": [
+      {
+        "source": "wechat/template/log4j.properties",
+        "target": "wechat/WEB-INF/classes/log4j.properties"
+      }
+    ]
+  },
+  "chinapay_deposit_scheduler": {
+    "app": "chinapay_deposit_scheduler",
+    "main_class": "com.thoughtworks.midas.deposit.DepositApp",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "chinapay_deposit"
+    },
+    "deposit": {
+      "cron": {
+        "sync": "0/2 * * * * ?",
+        "send": "0/2 * * * * ?",
+        "query": "0/30 * * * * ?",
+        "notify": "0/2 * * * * ?"
+      }
+    }
+  },
+  "chinapay_withdraw_scheduler": {
+    "app": "chinapay_withdraw_scheduler",
+    "main_class": "com.thoughtworks.midas.withdraw.WithdrawApp",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "chinapay_withdraw"
+    },
+    "withdraw": {
+      "feed": {
+        "filter": "23:59",
+        "cron": "0/30 * * * * ?"
+      },
+      "cron": {
+      "send": "0 55 13 * * ?",
+        "query": "0/30 * * * * ?",
+        "notify": "0/30 * * * * ?"
+      }
+    }
+  },
+  "chinapay_withdraw": {
+    "app": "chinapay_withdraw",
+    "main_class": "com.thoughtworks.midas.withdraw.app.WithdrawServer",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "chinapay_withdraw"
+    },
+    "withdraw": {
+      "feed": {
+        "filter": "00:00",
+        "cron": "0/30 * * * * ?"
+      },
+      "cron": {
+        "send": "0 0 10 * * ?",
+        "query": "0/30 * * * * ?",
+        "notify": "0/30 * * * * ?"
+      }
+    }
+  },
+  "yeepay_deposit_notify": {
+    "app": "yeepay_deposit_notify",
+    "main_class": "com.thoughtworks.midas.yeepay.app.Server",
+    "db": {
+      "url": "jdbc:mysql://rdsmeene2yuvbfi.mysql.rds.aliyuncs.com:3306/p2p",
+      "user": "p2p_ysc",
+      "password": "AAaa1234",
+      "version": "yeepay_deposit"
+    }
+  }
+}

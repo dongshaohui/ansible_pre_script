@@ -1,0 +1,3 @@
+ALTER TABLE CP_WITHDRAW_RECORD ADD COLUMN FLAG VARCHAR(20),
+                               ADD COLUMN CITY VARCHAR(100),
+                               ADD COLUMN PROVINCE VARCHAR(50);

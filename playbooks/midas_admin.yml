@@ -1,0 +1,6 @@
+- hosts: midas_admin
+  sudo: yes
+  roles:
+    - java
+    - tomcat
+    - war.tomcat

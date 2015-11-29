@@ -1,0 +1,9 @@
+- hosts: ums
+  sudo: yes
+  roles:
+    - java
+    - flyway.migration
+    - id5
+    - jar.standalone.daemon
+  vars:
+    skip_migration: false

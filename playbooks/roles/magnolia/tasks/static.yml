@@ -1,0 +1,23 @@
+---
+
+- name: examine the static.tar.gz
+  stat: path=/tmp/static.tar.gz
+  register: public_status
+
+- name: upload magnolia static archives
+  copy: src=static.tar.gz dest=/tmp
+  when: not public_status.stat.exists
+
+- name: extract the static
+  unarchive: src=/tmp/static.tar.gz dest=/opt/apache-tomcat-7.0.59/webapps copy=no
+             owner={{ tomcat_owner }} group={{ tomcat_group }} mode=0644
+  notify: restart tomcat
+
+- name: change the owner of the magnolia publish
+  shell: chown -R {{ tomcat_owner}}:{{ tomcat_group}} /opt/apache-tomcat-7.0.59/webapps/static
+
+- name: flush handler to make handle effect
+  meta: flush_handlers
+
+- name: ensure the tomcat is running
+  service: name=tomcat state=started

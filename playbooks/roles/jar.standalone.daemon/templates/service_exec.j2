@@ -1,0 +1,4 @@
+CLASS_PATH=$(find /{{ app }}/ -name "*.jar"|awk '{printf $0":"}'|rev|cut -c 2- |rev)
+/usr/bin/java -cp "/{{ app }}/:$CLASS_PATH:/{{ app }}/*.jar:/{{ app }}.jar" {{ main_class }} 1>/dev/null  2>&1 </dev/null &
+pid=$!
+echo ${pid} > /var/run/{{ app }}.pid

@@ -1,0 +1,32 @@
+- hosts: redis_master
+  sudo: yes
+  roles:
+    - db.redis
+
+# install redis slave
+- hosts: redis_slave
+  sudo: yes
+  roles:
+    - db.redis
+  vars:
+    - redis_slave_of: 10.139.106.48 6379
+    - redis_port: 63791
+
+# install redis sentinel
+- hosts: redis_sentinel
+  sudo: yes
+  roles:
+    - db.redis
+  vars:
+    redis_sentinel: true
+    redis_sentinel_monitors:
+      - name: master01
+        host: 10.139.106.48
+        port: 6379
+        quorum: 1
+        auth_pass: ant1r3z
+        down_after_milliseconds: 30000
+        parallel_syncs: 1
+        failover_timeout: 30000
+        notification_script: false
+        client_reconfig_script: false

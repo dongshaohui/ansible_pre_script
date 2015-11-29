@@ -1,0 +1,5 @@
+- hosts: lb
+  sudo: yes
+  roles:
+    - nginx
+    - lb

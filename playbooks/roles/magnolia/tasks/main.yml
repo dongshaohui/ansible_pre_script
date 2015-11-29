@@ -1,0 +1,7 @@
+---
+
+- include: author.yml
+  when: magnolia_author
+
+- include: static.yml
+  when: magnolia_publisher

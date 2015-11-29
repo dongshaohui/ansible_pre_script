@@ -1,0 +1,4 @@
+- hosts: deploy_server
+  sudo: yes
+  roles:
+    - ansible

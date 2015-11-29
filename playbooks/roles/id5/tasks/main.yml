@@ -1,0 +1,13 @@
+---
+
+- name: create id5 directory
+  file: path=/id5 state=directory
+
+- name: copy id5 files
+  copy: src={{ item }} dest=/id5/
+  with_items:
+    - 'InstallCert.class'
+    - 'InstallCert$SavingTrustManager.class'
+
+- name: add id5 ca
+  shell: 'echo 1 | java -cp /id5 InstallCert gboss.id5.cn'

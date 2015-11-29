@@ -1,0 +1,10 @@
+#! /bin/bash
+ssh 10.253.2.27 "/midas-flyway/flyway clean migrate"
+ssh 10.253.7.86 "/midas-flyway/flyway clean migrate"
+ssh 10.253.2.27 "/conf-flyway/flyway migrate"
+ssh 10.253.2.27 "/ums-flyway/flyway migrate"
+ssh 10.253.7.86 "/ums-flyway/flyway migrate"
+ssh 10.253.1.140 "/sms_scheduler-flyway/flyway migrate"
+ssh 10.253.1.140 "/yeepay_withdraw_scheduler-flyway/flyway migrate"
+ssh 10.253.16.37 "/chinapay_deposit_scheduler-flyway/flyway migrate"
+ssh 10.253.1.140 "/chinapay_withdraw_scheduler-flyway/flyway migrate"

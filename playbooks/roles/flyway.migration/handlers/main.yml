@@ -1,0 +1,4 @@
+---
+
+- name: flyway migrate
+  command: /{{ app }}-flyway/flyway migrate

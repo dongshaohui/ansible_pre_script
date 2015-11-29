@@ -1,0 +1,26 @@
+<tools>
+    <toolbox scope="request">
+        <tool class="org.apache.velocity.tools.view.ImportTool"/>
+    </toolbox>
+    <toolbox scope="request">
+        <tool class="org.apache.velocity.tools.generic.DateTool"/>
+    </toolbox>
+    <toolbox scope="request">
+        <tool class="org.apache.velocity.tools.view.LinkTool"/>
+    </toolbox>
+    <toolbox scope="application">
+        <tool key="numberTool" class="com.thoughtworks.midas.mvp.pdf.tool.NumberTool"/>
+    </toolbox>
+    <toolbox scope="application">
+        <tool key="dateUtils" class="com.thoughtworks.midas.mvp.pdf.tool.DateUtils"/>
+    </toolbox>
+    <toolbox scope="application">
+        <tool key="moneyTool" class="com.thoughtworks.midas.mvp.pdf.tool.MoneyTool"/>
+    </toolbox>
+    <toolbox scope="application">
+        <tool key="unitTool" class="com.thoughtworks.midas.mvp.pdf.tool.UnitTool"/>
+    </toolbox>
+    <toolbox scope="application">
+        <tool key="percentTool" class="com.thoughtworks.midas.mvp.pdf.tool.PercentTool"/>
+    </toolbox>
+</tools>

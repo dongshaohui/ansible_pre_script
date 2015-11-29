@@ -1,0 +1,11 @@
+---
+
+- name: copy nginx configuration
+  copy: src=nginx.conf dest=/etc/nginx/nginx.conf
+  notify:
+    - restart nginx
+
+- name: copy load balancer server configuration
+  copy: src=nginx-lb.conf dest=/etc/nginx/conf.d/default.conf
+  notify:
+    - restart nginx
